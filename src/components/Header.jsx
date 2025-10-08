@@ -7,10 +7,16 @@ import hMenu from '../assets/images/h-menu.svg';
 import closeIcon from '../assets/images/close.svg';
 import arrowDropDown from '../assets/images/arrow_drop_down.svg';
 
-const Header = () => {
+const Header = ({ homepage }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const { isSticky, scrollDirection, shadowStrength } = useStickyHeader();
+
+  // Use Strapi data with fallbacks
+  const ctaButtonsData = homepage?.ctaButtons || {};
+  const ctaText = ctaButtonsData.text || 'Watch Now';
+  const ctaUrl = ctaButtonsData.url || '#';
+  const ctaClass = ctaButtonsData.className || 'fw-800 lh-sm d-inline-block text-decoration-none';
 
   const headerVariants = useMemo(() => ({
     initial: { y: 0 },
@@ -53,7 +59,7 @@ const Header = () => {
             <span className="tag_lightBlue lh-1">Podcast</span>
             <span className="lh-sm d-inline-block">
               Global UNS, Local Complexity: Why Edge Context Isn't Enough{' '}
-              <a href="#" className="fw-800 lh-sm d-inline-block text-decoration-none">Watch Now</a>
+              <a href={ctaUrl} className={ctaClass}>{ctaText}</a>
             </span>
           </div>
         </div>

@@ -42,7 +42,7 @@ const HomePage = () => {
     <div ref={containerRef} className="home-page" style={{ position: 'relative' }}>
       {/* <StrapiDebugTest /> */}
       {/* <StrapiConnectionTest /> */}
-      <Header />
+      <Header homepage={homepage} />
       <HeroSection homepage={homepage} />
       <ClientLogoSlider homepage={homepage} />
       <InsightsSection homepage={homepage} />
