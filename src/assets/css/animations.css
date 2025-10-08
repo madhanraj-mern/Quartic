@@ -542,7 +542,7 @@
 }
 
 /* Header Top Banner */
-.wraper-header-top {
+.bannerCtaSection {
   background: linear-gradient(90deg, #000000 79.81%, #f15a29 100%);
   padding: 7px 0;
   height: 44px;
@@ -551,12 +551,12 @@
   align-items: center;
 }
 
-.wraper-header-top .infoText {
+.bannerCtaSection .infoText {
   font-size: 12px;
   color: white;
 }
 
-.wraper-header-top .tag_lightBlue {
+.bannerCtaSection .tag_lightBlue {
   background-color: #00bcd4;
   color: white;
   font-size: 14px;
@@ -564,7 +564,7 @@
   border-radius: 3px;
 }
 
-.wraper-header-top .infoText a {
+.bannerCtaSection .infoText a {
   color: #ff6b35;
   font-weight: 800;
 }

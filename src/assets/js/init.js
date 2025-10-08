@@ -682,7 +682,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function gradientShiftSmooth() {
-    const element = document.querySelector(".wraper-header-top");
+    const element = document.querySelector(".bannerCtaSection");
     const base = 74; // midpoint of the gradient stop range
     const range = 15; // how much it swings on each side (e.g., ±5%)
     const speed = 0.002; // lower = slower

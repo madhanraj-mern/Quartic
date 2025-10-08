@@ -30,7 +30,7 @@ const Header = () => {
     <>
       {/* Header Top Banner */}
       <motion.div 
-        className="wraper-header-top"
+        className="bannerCtaSection"
         style={{
           background: 'linear-gradient(-90deg, #000000 74%, #f15a29 100%)'
         }}

@@ -261,7 +261,7 @@ img {
 /* ====================== */
 /* START OF HEADER */
 /* ====================== */
-.wraper-header-top {
+.bannerCtaSection {
   padding: 7px 0;
   background-size: 100% 100%;
   -webkit-transition: all 0.3s ease-in-out;
@@ -273,50 +273,50 @@ img {
   align-items: center;
 }
 @media (min-width: 768px) {
-  .wraper-header-top {
+  .bannerCtaSection {
     padding: 12px 0;
   }
 }
 @media (min-width: 1800px) {
-  .wraper-header-top {
+  .bannerCtaSection {
     height: 52px;
   }
 }
-.wraper-header-top .infoText {
+.bannerCtaSection .infoText {
   font-size: 12px;
 }
 @media (min-width: 768px) {
-  .wraper-header-top .infoText {
+  .bannerCtaSection .infoText {
     font-size: 16px;
   }
 }
 @media (min-width: 1800px) {
-  .wraper-header-top .infoText {
+  .bannerCtaSection .infoText {
     font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
-  .wraper-header-top .infoText a {
+  .bannerCtaSection .infoText a {
     font-size: 20px;
   }
 }
-.wraper-header-top .tag_lightBlue {
+.bannerCtaSection .tag_lightBlue {
   font-size: 14px;
   padding: 2px 6px;
 }
 @media (min-width: 768px) {
-  .wraper-header-top .tag_lightBlue {
+  .bannerCtaSection .tag_lightBlue {
     font-size: 16px;
   }
 }
 @media (min-width: 1800px) {
-  .wraper-header-top .tag_lightBlue {
+  .bannerCtaSection .tag_lightBlue {
     font-size: 20px;
     padding: 4px 10px;
   }
 }
 @media (max-width: 767px) {
-  .wraper-header-top .container-fluid {
+  .bannerCtaSection .container-fluid {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -448,7 +448,7 @@ img {
   backdrop-filter: blur(12px) !important;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
 }
-.wraper-header.i-am-sticky .wraper-header-top {
+.wraper-header.i-am-sticky .bannerCtaSection {
   height: 0;
   visibility: hidden;
   transform: translateY(-44px);
