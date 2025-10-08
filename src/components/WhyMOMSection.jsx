@@ -26,21 +26,26 @@ const whyMomFeatures = [
 const WhyMOMSection = ({ homepage }) => {
   // Use Strapi data with fallbacks
   const advantageData = homepage?.theQuarticAdvantage || {};
+  const buttonData = homepage?.button || {};
   const title = advantageData.title || 'The Quartic Advantage';
   const subtitle = advantageData.subtitle || 'Connected, Intelligent MOM';
   const points = advantageData.points || whyMomFeatures;
-  const buttonText = advantageData.buttonText || 'Why Intelligent MOM';
-  const buttonUrl = advantageData.buttonUrl || '/why-mom';
+  const buttonText = buttonData.text || advantageData.buttonText || 'Why Intelligent MOM';
+  const buttonUrl = buttonData.url || advantageData.buttonUrl || '/why-mom';
+  const buttonClass = buttonData.className || 'btn btn_orange';
   
   // Debug logging
   console.log('🔍 WhyMOMSection Debug:', {
     hasHomepage: !!homepage,
     hasAdvantageData: !!advantageData,
+    hasButtonData: !!buttonData,
     advantageData,
+    buttonData,
     title,
     subtitle,
     buttonText,
     buttonUrl,
+    buttonClass,
     pointsCount: points?.length || 0,
     debugInfo: advantageData._debug
   });
@@ -89,8 +94,8 @@ const WhyMOMSection = ({ homepage }) => {
                   </ul>
                 </div>
 
-                <div className="btn-holder">
-                  <a href={buttonUrl} className="btn btn_orange" aria-label={buttonText}>
+                <div className={buttonData.containerClass || "btn-holder"}>
+                  <a href={buttonUrl} className={buttonClass} aria-label={buttonText}>
                     <span>{buttonText}</span>
                     <span className="arrow" />
                   </a>
