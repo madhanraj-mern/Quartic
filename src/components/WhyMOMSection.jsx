@@ -45,7 +45,7 @@ const WhyMOMSection = ({ homepage }) => {
     debugInfo: advantageData._debug
   });
   return (
-    <section className="theQuarticAdvantage">
+    <section className="theQuarticAdvantage bg-black">
       <div className="container pe-sm-0">
         <div className="w-100 position-relative">
           <AnimatedDivider className="col_divider_line anim-item-clipDown-line" />
