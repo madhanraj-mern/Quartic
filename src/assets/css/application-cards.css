@@ -1,0 +1,209 @@
+.applications_sec {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.applications_group {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.applications_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.applications_col.left,
+.applications_col.right {
+  height: 100%;
+}
+
+.applications_center_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.application_card {
+  position: relative;
+  height: 100%;
+  min-height: 320px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.application_card:hover,
+.application_card.is-hovered {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.12);
+}
+
+.application_card_content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  background: #fff;
+}
+
+.application_card_top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.application_card_top .icon_holder {
+  width: 50px;
+  height: 50px;
+}
+
+.application_card_top .icon_holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.application_card:hover .application_card_top .icon_holder img,
+.application_card.is-hovered .application_card_top .icon_holder img {
+  transform: scale(1.1);
+}
+
+.application_card_top .heading_text {
+  font-size: 28px;
+  line-height: 1.2;
+  color: #000;
+  margin: 0;
+  font-weight: 500;
+  transition: color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.application_card:hover .application_card_top .heading_text,
+.application_card.is-hovered .application_card_top .heading_text {
+  color: #f15a29;
+}
+
+.application_card_description {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.application_card:hover .application_card_description,
+.application_card.is-hovered .application_card_description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.application_card_link {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+.application_card:hover .application_card_link,
+.application_card.is-hovered .application_card_link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.application_card_link a {
+  color: #f15a29;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.application_card_link a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f15a29;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: left;
+}
+
+.application_card:hover .application_card_link a::after,
+.application_card.is-hovered .application_card_link a::after {
+  width: 100%;
+}
+
+.application_card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.application_card:hover::before,
+.application_card.is-hovered::before {
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .applications_group {
+    grid-template-columns: 1fr;
+  }
+  
+  .applications_center_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .application_card {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .applications_center_grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .application_card {
+    min-height: 260px;
+  }
+  
+  .application_card_top .heading_text {
+    font-size: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .application_card,
+  .application_card_top .icon_holder img,
+  .application_card_description,
+  .application_card_link,
+  .application_card_link a::after {
+    transition: none !important;
+  }
+}

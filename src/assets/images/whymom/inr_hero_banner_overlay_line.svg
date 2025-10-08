@@ -1,0 +1,15 @@
+<svg width="706" height="558" viewBox="0 0 706 558" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_6320_10259" fill="white">
+<path d="M706 187H0V371H706V187Z"/>
+</mask>
+<path d="M706 371H707V372H706V371ZM0 371V370H706V371V372H0V371ZM706 371H705V187H706H707V371H706Z" fill="white" fill-opacity="0.6" mask="url(#path-1-inside-1_6320_10259)"/>
+<path d="M335.5 187.5V557.5H518.5V187.5H335.5Z" stroke="white" stroke-opacity="0.6"/>
+<mask id="path-4-inside-2_6320_10259" fill="white">
+<path d="M335 371H0V558H335V371Z"/>
+</mask>
+<path d="M0 558V559H-1V558H0ZM0 371H1V558H0H-1V371H0ZM0 558V557H335V558V559H0V558Z" fill="white" fill-opacity="0.6" mask="url(#path-4-inside-2_6320_10259)"/>
+<mask id="path-6-inside-3_6320_10259" fill="white">
+<path d="M706 0H521V185H706V0Z"/>
+</mask>
+<path d="M521 185V186H520V185H521ZM706 185H707V186H706V185ZM521 0H522V185H521H520V0H521ZM521 185V184H706V185V186H521V185ZM706 185H705V0H706H707V185H706Z" fill="white" fill-opacity="0.6" mask="url(#path-6-inside-3_6320_10259)"/>
+</svg>

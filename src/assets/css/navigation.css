@@ -1,0 +1,188 @@
+/* Navigation Active Route Styles */
+.main-nav .menu li a.active,
+.mobile-header-menu .menu li a.active {
+  color: #ff6b35 !important;
+  font-weight: 600;
+  position: relative;
+}
+
+.main-nav .menu li a.active::after,
+.mobile-header-menu .menu li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ff6b35;
+  border-radius: 1px;
+}
+
+.btn-header.active {
+  background-color: #e55a2b !important;
+  border-color: #e55a2b !important;
+}
+
+.btn-header.active:hover {
+  background-color: #d14d1f !important;
+  border-color: #d14d1f !important;
+}
+
+/* Mobile menu active styles */
+.mobile-header-menu .menu li a.active {
+  background-color: rgba(255, 107, 53, 0.1);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+/* Smooth transitions for navigation links */
+.main-nav .menu li a,
+.mobile-header-menu .menu li a {
+  transition: all 0.3s ease;
+}
+
+.main-nav .menu li a:hover,
+.mobile-header-menu .menu li a:hover {
+  color: #ff6b35;
+  transform: translateY(-1px);
+}
+
+/* Breadcrumb active styles */
+.breadcrumb-item.active {
+  color: #ff6b35 !important;
+  font-weight: 600;
+}
+
+/* Page-specific styles */
+.solutions-page,
+.resources-page,
+.contact-page,
+.about-page {
+  min-height: 100vh;
+}
+
+/* Form styles for contact page */
+.comn_form .form-floating > .form-control:focus ~ label,
+.comn_form .form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: #ff6b35;
+}
+
+.comn_form .form-control:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+}
+
+/* Resource card styles */
+.resource_card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.resource_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #ff6b35;
+}
+
+.resource_type_badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.badge {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+
+.badge-blog {
+  background-color: #007bff;
+  color: white;
+}
+
+.badge-whitepaper {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-case-study {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.badge-webinar {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Solution card styles */
+.solution_card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.solution_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #ff6b35;
+}
+
+.features_list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.check_icon {
+  color: #28a745;
+  font-weight: bold;
+  margin-right: 8px;
+  width: 16px;
+}
+
+/* Contact info card styles */
+.contact_info_card {
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact_info_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #ff6b35;
+}
+
+.contact_info {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+/* Tab navigation styles */
+.nav-pills .nav-link {
+  border-radius: 25px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #ff6b35;
+  border-color: #ff6b35;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+  background-color: rgba(255, 107, 53, 0.1);
+  color: #ff6b35;
+}

@@ -1,0 +1,49 @@
+/* ======================
+START OF MAIN SCSS FILE FOR ASTRO WEBSITE
+=========================
+
+TABLE OF INDEX:
+
+# RESET CSS
+# COLORS CSS
+# VARIABLES CSS
+# TYPOGRAPHY CSS
+# MIXINS CSS
+# BUTTONS CSS
+====================== */
+
+@import 'globals/reset';
+@import 'globals/colors';
+@import 'globals/variables';
+@import 'globals/typography';
+@import 'globals/mixins';
+@import 'components/buttons';
+@import 'header';
+@import 'footer';
+@import 'main';
+@import 'home';
+@import 'blog';
+@import 'caselet';
+@import 'whymom';
+@import 'contact';
+@import 'partner';
+@import 'iluminator';
+@import 'exponence';
+@import 'industry';
+@import 'platform';
+@import 'resource';
+@import 'career';
+@import 'roles';
+@import 'process-optimizer';
+@import 'thank';
+@import 'video';
+@import 'about';
+@import 'alm';
+@import 'not_found';
+@import 'casestudy';
+
+/* ======================
+END OF MAIN SCSS FILE FOR ASTRO WEBSITE
+====================== */
+
+

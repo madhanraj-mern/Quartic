@@ -1,0 +1,67 @@
+.page-template-thank-you-template{
+    .wraper-header{
+        background-color: $color__white;
+    }
+}
+.thankyou__sec{
+    padding-top: 170px;
+    padding-bottom: 96px;
+    color: $color__white;
+    background-color: $color__black;
+    background: url('../images/thank/thank_left_img.svg') no-repeat left bottom, url('../images/thank/thank_right_img.svg') no-repeat right bottom, $color__black;
+     overflow: hidden;
+    position: relative;
+    background-size: 166px 220px;
+    @include mq(md){
+        background-size: 208px 274px;
+         padding-top: 256px;
+        padding-bottom: 144px;
+    }
+    //  @include mq(lg){
+    //     background-size: 330px px;
+    // }
+    @include mq(xl){
+        background-size: 416px 548px;
+    }
+    .thankyou__title{
+        @include font-size($bannerThank-headingText-sizes);
+        font-weight: 600;
+    }    
+    p{
+        color: inherit;
+        margin-top: 10px;
+    }
+    .btn_holder{
+        margin-top: 40px;
+    }
+    .banner__shape{
+        position: absolute;
+        pointer-events: none;
+        width: 526px;
+        height: 590px;
+        transform: rotate(45deg);
+        filter: blur(120px);
+        // @include mq(xl, max){
+        //     width: 400px;
+        //     height: 430px;
+        // }
+        // @include mq(md, max){
+        //     width: 300px;
+        //     height: 330px;
+        // }
+        &__01{
+ 
+            background: linear-gradient(30deg, #F76232 20.3%, #750F0F 71.35%);
+            left: auto;
+            bottom: -200px;
+            right: -530px;
+            
+        }
+        &__02{
+            bottom: -150px;
+            left: -600px;
+             background: linear-gradient(245deg, #F76232 20.3%, #750F0F 71.35%);
+
+        }
+    }
+}

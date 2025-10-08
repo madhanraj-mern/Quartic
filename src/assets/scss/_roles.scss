@@ -1,0 +1,369 @@
+// ------------- exp_accordion_sec ------------
+@keyframes glowani {
+  0% {
+    //transform: translate3d(0, 0, 0) rotate(0deg);
+    filter: blur(123px);
+  }
+  100% {
+    //transform: translate3d(100px, 180px, 120px) rotate(360deg);
+    filter: blur(250px);
+  }
+}
+.roles_cta_sec {
+  &.comn_sec_py {
+    @media (min-width: 992px) {
+      padding-top: 75px;
+    }
+  }
+  > .container {
+  }
+  .roles_cta_left_content {
+    padding: 50px 0 60px;
+    width: 100%;
+    @media (min-width: 768px) {
+      padding: 45px 0;
+    }
+    @media (min-width: 1200px) {
+      padding: 88px 0;
+    }
+    .sec_heading_wrap {
+      @media (min-width: 768px) {
+        max-width: 550px;
+      }
+      .heading_dsc_text {
+        max-width: 518px;
+        margin-top: 15px;
+        @media (min-width: 768px) {
+          margin-top: 30px;
+        }
+        @media (min-width: 1200px) {
+          margin-top: 45px;
+        }
+      }
+      .btn_holder {
+        margin-top: 25px;
+        @media (min-width: 992px) {
+          margin-top: 35px;
+        }
+      }
+    }
+  }
+
+  .roles_cta_img_wrap {
+    width: 100%;
+    padding-right: 0;
+    height: auto;
+    top: -55px;
+    margin-bottom: -55px;
+    //height: auto;
+    position: relative;
+
+    @media (min-width: 992px) {
+      height: calc(100% + 55px);
+      top: -55px;
+      margin-bottom: -55px;
+    }
+
+    .roles_cta_img_holder {
+      width: 350px;
+      position: relative;
+      margin-left: auto;
+      @media (min-width: 992px) {
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+      }
+      @media (min-width: 1200px) {
+      }
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+        object-position: right bottom;
+        position: relative;
+        z-index: 1;
+        @media (min-width: 992px) {
+          object-position: left top;
+          object-fit: cover;
+        }
+      }
+
+      .roles_cta_img_graphic {
+        width: 100%;
+        height: calc(100% - 55px);
+        position: absolute;
+        top: 55px;
+        right: -40px;
+
+        @media (min-width: 992px) {
+          overflow: hidden;
+        }
+
+        .moving-grid {
+          top: 10px;
+          right: 0;
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          background-image: url(../images/roles/moving_grid_img.svg);
+          background-size: contain;
+          animation: gridMoveing 7s linear infinite alternate;
+          z-index: 2;
+          will-change: transform;
+          @media (min-width: 992px) {
+            width: 372px;
+            height: 372px;
+          }
+        }
+
+        @keyframes gridMoveing {
+          0% {
+            //background-position: 0 0;
+            transform: translate(0, 0);
+            opacity: 1;
+          }
+          50% {
+            //background-position: -10px 0;
+            transform: translate(-10px, 0);
+            opacity: 0.5;
+          }
+          100% {
+            //background-position: 0 10px;
+            transform: translate(0, 10px);
+            opacity: 1;
+          }
+        }
+
+        .circle_glow_orange_shape {
+          width: 370px;
+          height: 370px;
+          position: absolute;
+          top: 10%;
+          right: 5%;
+          z-index: 0;
+          border-radius: 100%;
+          background: linear-gradient(
+            151.13deg,
+            #f15a29 -9.42%,
+            #750f0f 41.63%
+          );
+          filter: blur(123px);
+          animation: glowani 3s linear infinite alternate;
+          //animation: gridMoveing 60s linear infinite;
+        }
+      }
+    }
+  }
+}
+
+.whymom_features_sec {
+  &.roles_features_sec {
+    .osfc_left_col {
+      padding-top: 0;
+      padding-bottom: 40px;
+      .sec_heading_wrap {
+        @media (max-width: 767px) {
+          max-width: 500px;
+        }
+        .heading_dsc_text {
+          margin-top: 30px;
+          @media (max-width: 767px) {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+    .osfc_right_col {
+      padding-right: 25px;
+      .right_content_wrap {
+        padding-top: 0;
+        padding-bottom: 45px;
+        > .divider_line {
+          top: -75px;
+          height: auto;
+          bottom: 0;
+        }
+      }
+    }
+
+    .roles_features_item {
+      width: 100%;
+
+      @media (min-width: 768px) {
+        padding: 0 25px 0;
+        margin-bottom: 36px;
+      }
+      @media (min-width: 1800px) {
+        padding: 0 35px 0;
+      }
+
+      @media (min-width: 992px) {
+        width: 50%;
+        position: absolute;
+      }
+
+      &:nth-child(2) {
+        @media (min-width: 992px) {
+          padding-top: 40px;
+        }
+      }
+      .item_body {
+        width: 100%;
+        padding: 23px 23px;
+        background-color: $color__white;
+        height: 100%;
+        box-shadow: 0px 9px 16px 0px rgba(0, 0, 0, 0.15);
+
+        @media (min-width: 768px) {
+          box-shadow: 0px 14px 44px 0px rgba(0, 0, 0, 0.15);
+          height: auto;
+          padding: 25px;
+        }
+        @media (min-width: 1400px) {
+        }
+
+        .icon_holder {
+          width: 52px;
+          height: 52px;
+          flex-shrink: 0;
+          @media (min-width: 1200px) {
+            width: 60px;
+            height: 60px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        .dsc_content {
+          margin-top: 20px;
+          .heading_text {
+            font-weight: 600;
+            @include font-size($h28-sizes);
+            line-height: 1.3;
+            color: $color__black;
+            margin-bottom: 0;
+          }
+          .dsc_text {
+            margin-top: 25px;
+            p {
+              font-size: 16px;
+              line-height: 1.4;
+              font-weight: 600;
+              color: #454545;
+              margin: 0;
+              @media (min-width: 1800px) {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .caselet_quote_sec {
+      position: relative;
+      z-index: 4;
+      padding-right: 15px;
+      //background-color: $color__white;
+      //padding-top: 35px;
+      @media (min-width: 768px) {
+        padding-right: 30px;
+      }
+      @media (min-width: 1200px) {
+        padding-right: 50px;
+      }
+    }
+    .for_bottom_line {
+      height: 50px;
+      width: 100%;
+      @media (min-width: 768px) {
+        height: 60px;
+      }
+      @media (min-width: 1200px) {
+        height: 75px;
+      }
+      .divider_line {
+        left: 50%;
+      }
+    }
+  }
+}
+
+.dif_cards_holder {
+  width: 100%;
+
+  .splide__track {
+    //overflow: auto !important;
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+
+  .dif_card {
+    width: 100%;
+
+    .card_body {
+      padding: 20px;
+      .dif_card_heading_item {
+        border-bottom: 1px solid #d9d9d9;
+        padding-bottom: 14px;
+        .card_heading_text {
+          font-size: 20px;
+          line-height: 1.3;
+          font-weight: 600;
+        }
+      }
+      .dif_cards_items_holder {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding-top: 25px;
+      }
+      .dif_cards_item {
+        column-gap: 10px;
+        img {
+          width: 18px;
+          flex-shrink: 0;
+          align-self: flex-start;
+          margin-top: 5px;
+        }
+        .item_text {
+          font-size: 16px;
+          font-weight: 600;
+          color: $color__black;
+          @media (min-width: 768) {
+            font-size: 18px;
+          }
+          @media (min-width: 1800px) {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+    &.dif_card_normal {
+      .card_body {
+        padding-left: 0;
+        .dif_card_heading_item {
+          .card_heading_text {
+            color: $color__black;
+          }
+        }
+      }
+    }
+    &.dif_card_white {
+      .card_body {
+        background-color: $color__white;
+        box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.15);
+        .dif_card_heading_item {
+          .card_heading_text {
+            color: $color__primary;
+          }
+        }
+      }
+    }
+  }
+}
