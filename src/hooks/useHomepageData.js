@@ -57,6 +57,8 @@ const useHomepageData = () => {
               OurProcess: strapiData?.OurProcess ? 'Available' : 'Not available',
               theQuarticAdvantage: strapiData?.theQuarticAdvantage ? 'Available' : 'Not available',
               theQuarticAdvantageData: strapiData?.theQuarticAdvantage || 'No data',
+              button: strapiData?.button ? 'Available' : 'Not available',
+              buttonData: strapiData?.button || 'No data',
               RequestDemo: strapiData?.RequestDemo ? 'Available' : 'Not available',
               WhereItWorks: strapiData?.WhereItWorks ? 'Available' : 'Not available',
               whoIsItFor: strapiData?.whoIsItFor ? 'Available' : 'Not available',
@@ -285,6 +287,18 @@ const useHomepageData = () => {
                 buttonObject: strapiData.theQuarticAdvantage?.button,
                 buttonText: strapiData.theQuarticAdvantage?.buttonText,
                 buttonUrl: strapiData.theQuarticAdvantage?.buttonUrl
+              }
+            },
+            button: {
+              // ✅ Separate button section for global button data
+              text: strapiData.button?.text || strapiData.button?.buttonName || 'Why Intelligent MOM',
+              url: strapiData.button?.url || '/why-mom',
+              className: strapiData.button?.className || 'btn btn_orange',
+              containerClass: strapiData.button?.containerClass || 'btn-holder',
+              // Debug: Log the actual button data structure
+              _debug: {
+                rawButtonData: strapiData.button,
+                hasButtonData: !!strapiData.button
               }
             }
   };
