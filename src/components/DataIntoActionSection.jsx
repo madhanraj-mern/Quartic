@@ -8,7 +8,7 @@ const DataIntoActionSection = ({ homepage }) => {
   // Use Strapi data with fallbacks
   const exploreButtonData = homepage?.exploreButton || {};
   const buttonText = exploreButtonData.buttonName || 'Explore All';
-  const buttonUrl = exploreButtonData.url || 'https://www.quartic.ai/customers/';
+  const buttonUrl = exploreButtonData.url || 'https://www.quartic.ai/customer-stories/';
   
   // Debug logging
   console.log('🔍 Explore Button Debug:', {
