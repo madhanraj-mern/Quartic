@@ -383,3 +383,4 @@ For complex data structures:
 
 **Note**: This setup enables full dynamic content management through Strapi while maintaining fallback functionality for development and reliability.
 
+

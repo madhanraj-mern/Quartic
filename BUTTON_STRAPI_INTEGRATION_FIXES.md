@@ -151,3 +151,4 @@ console.log('Component - buttonUrl:', buttonUrl);
 
 The application now has comprehensive button Strapi integration with proper fallback data for all scenarios.
 
+

@@ -171,3 +171,4 @@ The IWS Section now perfectly matches the original quartic-html implementation:
 
 The section now has full functionality with image swiping, counter animations, and exact styling from the original quartic-html project! 🎉
 
+

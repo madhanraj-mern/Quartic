@@ -128,3 +128,4 @@ The popup animation now works perfectly:
 
 The industry card popup animation is now working smoothly with a professional scale-up effect! 🎉
 
+

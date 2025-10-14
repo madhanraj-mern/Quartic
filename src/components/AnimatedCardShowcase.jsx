@@ -82,3 +82,4 @@ const AnimatedCardShowcase = ({ homepage, data, isFirst, isLast, sectionIndex, p
 };
 
 export default AnimatedCardShowcase;
+

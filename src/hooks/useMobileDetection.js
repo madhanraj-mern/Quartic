@@ -51,3 +51,4 @@ const useMobileDetection = () => {
 };
 
 export default useMobileDetection;
+

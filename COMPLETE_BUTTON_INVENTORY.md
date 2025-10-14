@@ -187,3 +187,4 @@ This document provides a comprehensive list of all buttons across the Quartic ap
 
 The primary CTAs are well-integrated with Strapi, but most product and navigation buttons still use hardcoded values and could benefit from Strapi integration for better content management.
 
+

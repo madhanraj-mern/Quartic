@@ -39,3 +39,4 @@ For future reference:
 - GSAP `power3.out` = Framer Motion `[0.215, 0.61, 0.355, 1]`
 - GSAP `power4.out` = Framer Motion `[0.165, 0.84, 0.44, 1]`
 
+

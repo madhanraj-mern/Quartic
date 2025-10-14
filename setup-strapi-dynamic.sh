@@ -60,3 +60,4 @@ echo "   - test-strapi-dynamic.js - Test script for validation"
 echo ""
 echo "✨ Setup script completed!"
 
+

@@ -150,3 +150,4 @@ The IWS Section now displays the industry card as a popup overlay exactly like y
 
 The popup card now perfectly matches the design specification from your reference image! 🎉
 
+

@@ -128,3 +128,4 @@ console.log('Component - sectionData:', sectionData);
 
 The application is now fully optimized for both Strapi integration and fallback data scenarios.
 
+

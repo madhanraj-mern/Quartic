@@ -239,3 +239,4 @@ const sectionTitle = homepage?.applicationsSection?.title || 'Transform Your Ope
 
 The majority of buttons are properly integrated with Strapi data, but 4 components need fixes to access the correct data properties.
 
+

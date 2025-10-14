@@ -149,3 +149,4 @@ const fallbackData = {
 
 The application is working correctly with fallback data, but these fixes will ensure proper Strapi integration when the correct API is available.
 
+

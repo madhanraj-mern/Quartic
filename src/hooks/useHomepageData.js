@@ -583,6 +583,7 @@ const useDynamicPageData = (pageId) => {
         }
         
         const data = await response.json();
+        console.log(`🎉 Page ${pageId} data loaded successfully:`, data.data);
         
         // The about API already returns sections in the correct format
         if (data.data && data.data.sections) {
@@ -596,6 +597,7 @@ const useDynamicPageData = (pageId) => {
           setPageData(data.data);
         }
       } catch (err) {
+        console.warn(`Page ${pageId} not available:`, err.message);
         setError(err);
         setPageData(null);
       } finally {

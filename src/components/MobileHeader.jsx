@@ -212,3 +212,4 @@ const MobileHeader = ({ homepage, data }) => {
 };
 
 export default MobileHeader;
+

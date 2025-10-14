@@ -222,3 +222,4 @@ whyChooseQuartic: {
 
 The Strapi structure has comprehensive button data for most sections, but several components are not utilizing the available data and some sections are missing button data entirely.
 
+

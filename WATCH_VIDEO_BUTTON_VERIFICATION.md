@@ -126,3 +126,4 @@ The button will automatically use the Strapi data for both text and URL, with th
 
 The button is working as designed - it uses Strapi data when available and falls back to local data when Strapi is not configured. No changes are needed.
 
+

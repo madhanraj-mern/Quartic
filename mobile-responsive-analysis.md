@@ -100,3 +100,4 @@
 - Responsive images with object-fit
 - Adaptive typography
 - Touch-optimized interactions
+
