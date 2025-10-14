@@ -49,8 +49,8 @@ const HomePage = () => {
       
       {/* <StrapiDebugTest /> */}
       {/* <StrapiConnectionTest /> */}
-      <ImageTest />
-      <DirectImageTest />
+      {/* <ImageTest /> */}
+      {/* <DirectImageTest /> */}
       
       {isDynamic ? (
         // Dynamic rendering - sections are controlled by Strapi
@@ -63,7 +63,7 @@ const HomePage = () => {
         // Static rendering - fallback to hardcoded sections
         <>
           <Header homepage={homepage} />
-          <SimpleHeroSection homepage={homepage} />
+          <HeroSection homepage={homepage} />
           <ClientLogoSlider homepage={homepage} />
           <HowItWorksSection homepage={homepage} />
           <WhyMOMSection homepage={homepage} />
