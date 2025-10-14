@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-// Import warehouse background image
 import warehouseImg from '../assets/images/home/home_wcq_sec_bg_img.jpg';
+import { mapBulletPoints, getSectionData } from '../utils/dataMapping';
 
 const StyledSection = styled.section`
   padding: 0;
@@ -84,20 +83,15 @@ const StyledSection = styled.section`
   }
 
   .section_title {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
-    color: #ffffff;
-    background: #ff6a00;
-    padding: 12px 18px;
+    color: #000000;
     margin: 0 0 30px 0;
     line-height: 1.2;
-    border-radius: 8px;
-    display: inline-block;
     
     @media (max-width: 768px) {
-      font-size: 20px;
+      font-size: 28px;
       margin-bottom: 25px;
-      padding: 10px 16px;
     }
   }
 
@@ -112,17 +106,18 @@ const StyledSection = styled.section`
     align-items: flex-start;
     gap: 12px;
     margin-bottom: 16px;
-    color: #333333;
-    font-size: 14px;
-    line-height: 1.4;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
     
     &:last-child {
       margin-bottom: 0;
     }
     
     .check_icon {
-      width: 18px;
-      height: 18px;
+      width: 20px;
+      height: 20px;
       background: #ff6a00;
       border-radius: 50%;
       display: flex;
@@ -134,7 +129,7 @@ const StyledSection = styled.section`
       &::before {
         content: '✓';
         color: white;
-        font-size: 10px;
+        font-size: 12px;
         font-weight: bold;
       }
     }
@@ -144,15 +139,15 @@ const StyledSection = styled.section`
     background: #ff6a00;
     color: #ffffff;
     border: none;
-    padding: 12px 24px;
+    padding: 16px 32px;
     border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     text-decoration: none;
     
     &:hover {
@@ -163,6 +158,7 @@ const StyledSection = styled.section`
     
     .arrow_icon {
       transition: transform 0.3s ease;
+      font-size: 14px;
     }
     
     &:hover .arrow_icon {
@@ -171,18 +167,33 @@ const StyledSection = styled.section`
   }
 `;
 
-const WhyChooseQuarticSection = ({ homepage }) => {
-  // Use Strapi data with fallbacks
-  const whyChooseData = homepage?.whyChooseQuartic || {};
-  const features = whyChooseData.features || [
-    'Built for regulated manufacturing',
-    'Deep OT/IT integration with DataOps',
-    'Accelerates time-to-impact with small-data AI',
-    'Scalable for complex plant networks'
-  ];
+const WhyChooseQuarticSection = ({ homepage, data }) => {
+  // Use section data or homepage fallback
+  const whyChooseData = getSectionData(data, homepage, {}, 'whyChooseQuartic');
+  
+  // Extract features from bulletPoints array or use fallback
+  let features = [];
+  if (whyChooseData.bulletPoints && Array.isArray(whyChooseData.bulletPoints)) {
+    features = mapBulletPoints(whyChooseData.bulletPoints);
+  } else if (whyChooseData.features && Array.isArray(whyChooseData.features)) {
+    features = whyChooseData.features;
+  } else if (whyChooseData.listItems && Array.isArray(whyChooseData.listItems)) {
+    features = whyChooseData.listItems;
+  } else {
+    // Static fallback
+    features = [
+      'Built for regulated manufacturing',
+      'Deep OT/IT integration with DataOps',
+      'Accelerates time-to-impact with small-data AI',
+      'Scalable for complex plant networks'
+    ];
+  }
+  
   const title = whyChooseData.title || 'Why Choose Quartic';
-  const ctaText = whyChooseData.ctaText || 'Talk to an Expert';
-  const ctaUrl = whyChooseData.ctaUrl || '#contact';
+  const subtitle = whyChooseData.subtitle || whyChooseData.description || '';
+  const ctaText = whyChooseData.ctaText || whyChooseData.buttonText || 'Talk to an Expert';
+  const ctaUrl = whyChooseData.ctaUrl || whyChooseData.buttonUrl || '#contact';
+  
 
   return (
     <StyledSection>
@@ -201,6 +212,15 @@ const WhyChooseQuarticSection = ({ homepage }) => {
             data-aos-delay="200"
           >
             <h2 className="section_title">{title}</h2>
+            {subtitle && (
+              <p className="section_subtitle" style={{ 
+                fontSize: '16px', 
+                color: '#666', 
+                marginBottom: '20px' 
+              }}>
+                {subtitle}
+              </p>
+            )}
             
             <ul className="features_list">
               {features.map((feature, index) => (
