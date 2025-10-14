@@ -23,6 +23,7 @@ import Footer from '../components/Footer';
 
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
+import ImageTest from '../components/ImageTest';
 // import StrapiDebugTest from '../components/StrapiDebugTest';
 // import StrapiConnectionTest from '../components/StrapiConnectionTest';
 
@@ -46,6 +47,7 @@ const HomePage = () => {
       
       {/* <StrapiDebugTest /> */}
       {/* <StrapiConnectionTest /> */}
+      <ImageTest />
       
       {isDynamic ? (
         // Dynamic rendering - sections are controlled by Strapi
