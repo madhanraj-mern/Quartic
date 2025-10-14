@@ -42,8 +42,7 @@ const HomePage = () => {
   }
 
   // Check if this is dynamic content (has dynamicSections)
-  // TEMPORARILY FORCE STATIC RENDERING FOR DEBUGGING
-  const isDynamic = false; // homepage?.isDynamic && homepage?.dynamicSections;
+  const isDynamic = homepage?.isDynamic && homepage?.dynamicSections;
 
   // Debug: Log which rendering path is being taken
   console.log('🏠 HomePage - Rendering decision:', {

@@ -9,6 +9,17 @@ const AboutPage = () => {
   const containerRef = useGSAPAnimations();
   const { pageData, loading, error } = useDynamicPageData(2); // Assuming About page has ID 2
 
+  // Debug: Log About page data
+  console.log('📄 AboutPage - Data status:', {
+    loading,
+    error: error?.message,
+    hasPageData: !!pageData,
+    isDynamic: pageData?.isDynamic,
+    hasDynamicSections: !!pageData?.dynamicSections,
+    sectionsCount: pageData?.dynamicSections?.length || 0,
+    pageDataKeys: pageData ? Object.keys(pageData) : []
+  });
+
   if (loading) {
     return <LoadingSpinner />;
   }
