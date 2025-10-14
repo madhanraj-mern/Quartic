@@ -31,6 +31,15 @@ const HeroSection = ({ homepage, data }) => {
   
   // Use local images for now
   const imageList = [heroImg1, heroImg2, heroImg3, heroImg4];
+  
+  // Debug: Log the imported image URLs
+  console.log('🖼️ HeroSection - Imported image URLs:', {
+    heroImg1,
+    heroImg2, 
+    heroImg3,
+    heroImg4,
+    imageList
+  });
 
   // Get content from Strapi or use defaults
   const title = heroData.title || 'Decision Intelligence for Manufacturing Operations Management';

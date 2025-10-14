@@ -35,6 +35,7 @@ const GridContainer = ({
   useEffect(() => {
     if (gridRef.current && imageList && imageList.length > 0) {
       gridRef.current.setAttribute('data-home-page-banner-images', JSON.stringify(imageList));
+      console.log('🖼️ GridContainer - Image list received:', imageList);
     }
   }, [imageList]);
 
@@ -67,6 +68,16 @@ const GridContainer = ({
         const visibleFace = state.visibleFace || 'front';
         const frontImage = imageList?.[state.frontIndex] || null;
         const backImage = imageList?.[state.backIndex] || null;
+        
+        // Debug: Log image URLs for first few tiles
+        if (index < 4) {
+          console.log(`🖼️ GridContainer - Tile ${index}:`, {
+            frontImage,
+            backImage,
+            frontIndex: state.frontIndex,
+            backIndex: state.backIndex
+          });
+        }
 
         const col = index % config.cols;
         const row = Math.floor(index / config.cols);
