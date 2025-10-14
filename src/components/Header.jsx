@@ -138,7 +138,7 @@ const Header = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => 
                       { label: 'Solutions', hasDropdown: true, url: '#' },
                       { label: 'Customers', hasDropdown: false, url: '#' },
                       { label: 'Resource Hub', hasDropdown: true, url: '#' },
-                      { label: 'About', hasDropdown: true, url: '/about' }
+                      { label: 'About Us', hasDropdown: true, url: '/about' }
                     ]).map((item, index) => (
                       <li key={index}>
                         <Link to={item.url}>
@@ -214,7 +214,7 @@ const Header = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => 
                   { label: 'Solutions', hasDropdown: true, url: '/solutions' },
                   { label: 'Customers', hasDropdown: false, url: '/customers' },
                   { label: 'Resource Hub', hasDropdown: true, url: '/resources' },
-                  { label: 'About', hasDropdown: true, url: '/about' }
+                  { label: 'About Us', hasDropdown: true, url: '/about' }
                 ]).map((item, index) => (
                   <li key={index} className="mobile-nav-item">
                     <button 
