@@ -3,6 +3,36 @@
  */
 
 /**
+ * Get full image URL from Strapi image object
+ * @param {Object} imageObj - Strapi image object with url property
+ * @param {string} baseUrl - Base URL for Strapi (optional, defaults to cancerfax URL)
+ * @returns {string} - Full image URL
+ */
+export const getStrapiImageUrl = (imageObj, baseUrl = 'https://cancerfax.unifiedinfotechonline.com') => {
+  if (!imageObj || !imageObj.url) return '';
+  
+  if (imageObj.url.startsWith('/uploads/')) {
+    return `${baseUrl}${imageObj.url}`;
+  }
+  
+  return imageObj.url;
+};
+
+/**
+ * Get multiple image URLs from Strapi images array
+ * @param {Array} imagesArray - Array of Strapi image objects
+ * @param {string} baseUrl - Base URL for Strapi (optional)
+ * @returns {Array<string>} - Array of full image URLs
+ */
+export const getStrapiImageUrls = (imagesArray, baseUrl = 'https://cancerfax.unifiedinfotechonline.com') => {
+  if (!Array.isArray(imagesArray)) return [];
+  
+  return imagesArray
+    .map(img => getStrapiImageUrl(img, baseUrl))
+    .filter(url => url); // Remove empty URLs
+};
+
+/**
  * Map testimonial data from various API structures to component format
  * @param {Array} testimonials - Raw testimonial data from API
  * @param {string} defaultImage - Default image for testimonials

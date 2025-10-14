@@ -126,12 +126,12 @@ const useHomepageData = (forceRefresh = false) => {
       console.log('✅ Strapi URL is configured, attempting API call...');
       
       // Try to fetch from Strapi first - check both homepage and pages endpoints
-      let response = await fetch(`${strapiUrl}/api/pages/1?populate=sections`);
+      let response = await fetch(`${strapiUrl}/api/pages/1?populate[0]=sections&populate[1]=sections.backgroundImage&populate[2]=sections.images&populate[3]=sections.heroImages&populate[4]=sections.bulletPoints&populate[5]=sections.features`);
       
       // If pages endpoint fails, try homepage endpoint
       if (!response.ok) {
         console.log('Pages endpoint failed, trying homepage endpoint...');
-        response = await fetch(`${strapiUrl}/api/homepage?populate=*`);
+        response = await fetch(`${strapiUrl}/api/homepage?populate[0]=sections&populate[1]=sections.backgroundImage&populate[2]=sections.images&populate[3]=sections.heroImages&populate[4]=sections.bulletPoints&populate[5]=sections.features`);
       }
       
       if (!response.ok) {
@@ -571,9 +571,9 @@ const useDynamicPageData = (pageId) => {
       try {
         setLoading(true);
         
-        // Use the specific about endpoint for about page with detailed population
+        // Use the specific about endpoint for about page with detailed population including images
         const endpoint = pageId === 2 ? 
-          'https://cancerfax.unifiedinfotechonline.com/api/about?populate[0]=sections&populate[1]=sections.bulletPoints&populate[2]=sections.features' :
+          'https://cancerfax.unifiedinfotechonline.com/api/about?populate[0]=sections&populate[1]=sections.bulletPoints&populate[2]=sections.features&populate[3]=sections.backgroundImage&populate[4]=sections.images&populate[5]=sections.heroImages' :
           `https://cancerfax.unifiedinfotechonline.com/api/pages/${pageId}?populate=sections`;
         
         const response = await fetch(endpoint);

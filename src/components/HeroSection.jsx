@@ -4,6 +4,7 @@ import useParallax from '../hooks/useParallax';
 import useHoverEffects from '../hooks/useHoverEffects';
 import useMobileDetection from '../hooks/useMobileDetection';
 import GridContainer from './GridContainer';
+import { getStrapiImageUrl, getStrapiImageUrls } from '../utils/dataMapping';
 import heroImg1 from '../assets/images/home/hero-banner-img1.jpg';
 import heroImg2 from '../assets/images/home/home_banner_img2.jpg';
 import heroImg3 from '../assets/images/home/home_banner_img3.jpg';
@@ -17,28 +18,40 @@ const HeroSection = ({ homepage, data }) => {
   const { hoverVariants, floatVariants } = useHoverEffects();
   const { isMobile, isTablet } = useMobileDetection();
   
-  // Helper function to get full image URL from Strapi
-  const getImageUrl = (url) => {
-    if (!url) return '';
-    if (url.startsWith('/uploads/')) {
-      return `https://cancerfax.unifiedinfotechonline.com${url}`;
-    }
-    return url;
-  };
-
   // Get content from section data or homepage fallback
   const heroData = data || homepage?.heroSection || {};
   
-  // Use local images for now
-  const imageList = [heroImg1, heroImg2, heroImg3, heroImg4];
+  // Get dynamic images from Strapi or use fallback local images
+  let imageList = [heroImg1, heroImg2, heroImg3, heroImg4]; // Fallback images
   
-  // Debug: Log the imported image URLs
-  console.log('🖼️ HeroSection - Imported image URLs:', {
-    heroImg1,
-    heroImg2, 
-    heroImg3,
-    heroImg4,
-    imageList
+  if (heroData.backgroundImage) {
+    // Use Strapi background image if available
+    const strapiImageUrl = getStrapiImageUrl(heroData.backgroundImage);
+    if (strapiImageUrl) {
+      imageList = [strapiImageUrl, heroImg2, heroImg3, heroImg4];
+    }
+  } else if (heroData.images && Array.isArray(heroData.images)) {
+    // Use multiple Strapi images if available
+    const strapiImages = getStrapiImageUrls(heroData.images);
+    if (strapiImages.length > 0) {
+      imageList = [...strapiImages];
+      // Pad with fallback images if needed
+      while (imageList.length < 4) {
+        imageList.push(heroImg1, heroImg2, heroImg3, heroImg4);
+      }
+      imageList = imageList.slice(0, 4);
+    }
+  }
+  
+  // Debug: Log the image URLs being used
+  console.log('🖼️ HeroSection - Image URLs:', {
+    hasStrapiImage: !!heroData.backgroundImage,
+    strapiImageUrl: heroData.backgroundImage?.url,
+    fullImageUrl: heroData.backgroundImage ? getStrapiImageUrl(heroData.backgroundImage) : null,
+    hasImagesArray: !!heroData.images,
+    imagesArrayLength: heroData.images?.length || 0,
+    imageList,
+    heroData: heroData
   });
 
   // Get content from Strapi or use defaults
