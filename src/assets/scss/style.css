@@ -249,7 +249,7 @@ img {
 /* ====================== */
 /* START OF HEADER */
 /* ====================== */
-.bannerCtaSection {
+.wraper-header-top {
   padding: 7px 0;
   background-size: 100% 100%;
   -webkit-transition: all 0.3s ease-in-out;
@@ -261,50 +261,50 @@ img {
   align-items: center;
 }
 @media (min-width: 768px) {
-  .bannerCtaSection {
+  .wraper-header-top {
     padding: 12px 0;
   }
 }
 @media (min-width: 1800px) {
-  .bannerCtaSection {
+  .wraper-header-top {
     height: 52px;
   }
 }
-.bannerCtaSection .infoText {
+.wraper-header-top .infoText {
   font-size: 12px;
 }
 @media (min-width: 768px) {
-  .bannerCtaSection .infoText {
+  .wraper-header-top .infoText {
     font-size: 16px;
   }
 }
 @media (min-width: 1800px) {
-  .bannerCtaSection .infoText {
+  .wraper-header-top .infoText {
     font-size: 20px;
   }
 }
 @media (min-width: 1800px) {
-  .bannerCtaSection .infoText a {
+  .wraper-header-top .infoText a {
     font-size: 20px;
   }
 }
-.bannerCtaSection .tag_lightBlue {
+.wraper-header-top .tag_lightBlue {
   font-size: 14px;
   padding: 2px 6px;
 }
 @media (min-width: 768px) {
-  .bannerCtaSection .tag_lightBlue {
+  .wraper-header-top .tag_lightBlue {
     font-size: 16px;
   }
 }
 @media (min-width: 1800px) {
-  .bannerCtaSection .tag_lightBlue {
+  .wraper-header-top .tag_lightBlue {
     font-size: 20px;
     padding: 4px 10px;
   }
 }
 @media (max-width: 767px) {
-  .bannerCtaSection .container-fluid {
+  .wraper-header-top .container-fluid {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -414,7 +414,7 @@ img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   top: 0;
 }
-.wraper-header.i-am-sticky .bannerCtaSection {
+.wraper-header.i-am-sticky .wraper-header-top {
   height: 0;
   visibility: hidden;
   transform: translateY(-44px);
@@ -6210,7 +6210,7 @@ body.lockScroll {
   }
 }
 
-.theQuarticAdvantage .col_divider_line {
+.home_why_mom_sec .col_divider_line {
   width: 1px;
   background: #97d6df;
   position: absolute;
@@ -6221,28 +6221,28 @@ body.lockScroll {
   will-change: transform;
 }
 @media (max-width: 991.9px) {
-  .theQuarticAdvantage .col_divider_line {
+  .home_why_mom_sec .col_divider_line {
     display: none;
   }
 }
-.theQuarticAdvantage .home_why_mom_svg_col {
+.home_why_mom_sec .home_why_mom_svg_col {
   flex: 0 0 auto;
   width: 100%;
 }
 @media (min-width: 992px) {
-  .theQuarticAdvantage .home_why_mom_svg_col {
+  .home_why_mom_sec .home_why_mom_svg_col {
     width: 62%;
   }
 }
 @media (max-width: 767px) {
-  .theQuarticAdvantage .home_why_mom_svg_col {
+  .home_why_mom_sec .home_why_mom_svg_col {
     padding-top: 40px;
   }
 }
-.theQuarticAdvantage .home_why_mom_svg_col .zoom-container {
+.home_why_mom_sec .home_why_mom_svg_col .zoom-container {
   position: relative;
 }
-.theQuarticAdvantage .home_why_mom_svg_col .zoom-container .zoom_toggle_btn {
+.home_why_mom_sec .home_why_mom_svg_col .zoom-container .zoom_toggle_btn {
   display: flex;
   align-items: center;
   position: absolute;
@@ -6256,61 +6256,61 @@ body.lockScroll {
   padding: 0;
   border: none;
 }
-.theQuarticAdvantage .home_why_mom_svg_col .zoom-container svg {
+.home_why_mom_sec .home_why_mom_svg_col .zoom-container svg {
   width: 100%;
   height: auto;
   touch-action: none; /* important for mobile */
 }
-.theQuarticAdvantage .home_why_mom_svg_col .svg_holder img {
+.home_why_mom_sec .home_why_mom_svg_col .svg_holder img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.theQuarticAdvantage .home_why_mom_dsc_content_col {
+.home_why_mom_sec .home_why_mom_dsc_content_col {
   flex: 0 0 auto;
   width: 100%;
 }
 @media (min-width: 992px) {
-  .theQuarticAdvantage .home_why_mom_dsc_content_col {
+  .home_why_mom_sec .home_why_mom_dsc_content_col {
     width: 38%;
     padding-left: 25px;
   }
 }
-.theQuarticAdvantage .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder {
+.home_why_mom_sec .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder {
   padding-top: 30px;
   padding-bottom: 55px;
 }
 @media (min-width: 768px) {
-  .theQuarticAdvantage .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder {
+  .home_why_mom_sec .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder {
     padding-top: 56px;
     padding-bottom: 66px;
   }
 }
 @media (max-width: 991px) {
-  .theQuarticAdvantage .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder {
+  .home_why_mom_sec .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.theQuarticAdvantage .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder .sec_heading_wrap {
+.home_why_mom_sec .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder .sec_heading_wrap {
   margin-bottom: 24px;
 }
 @media (min-width: 768px) {
-  .theQuarticAdvantage .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder .sec_heading_wrap {
+  .home_why_mom_sec .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder .sec_heading_wrap {
     margin-bottom: 40px;
   }
 }
-.theQuarticAdvantage .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder .btn-holder {
+.home_why_mom_sec .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder .btn-holder {
   margin-top: 30px;
 }
 @media (min-width: 768px) {
-  .theQuarticAdvantage .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder .btn-holder {
+  .home_why_mom_sec .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder .btn-holder {
     margin-top: 50px;
   }
 }
 @media (max-width: 767px) {
-  .theQuarticAdvantage .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder .btn-holder .fst-italic {
+  .home_why_mom_sec .home_why_mom_dsc_content_col .home_why_mom_dsc_content_holder .btn-holder .fst-italic {
     max-width: 275px;
   }
 }

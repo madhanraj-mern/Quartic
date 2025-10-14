@@ -363,8 +363,14 @@ const ApplicationsSection = ({ homepage }) => {
   ];
 
   // Use Strapi data if available, otherwise use default data
-  const applications = homepage?.applications?.cards || defaultApplications;
-  const sectionTitle = homepage?.applications?.title || 'Transform Your Operations with Quartic';
+  const sectionData = homepage?.applicationsSection;
+  const applications = sectionData?.applications || defaultApplications;
+  const sectionTitle = sectionData?.title || 'Transform Your Operations with Quartic';
+  
+  // Debug logging
+  console.log('ApplicationsSection - homepage:', homepage);
+  console.log('ApplicationsSection - sectionData:', sectionData);
+  console.log('ApplicationsSection - applications:', applications);
   
 
 

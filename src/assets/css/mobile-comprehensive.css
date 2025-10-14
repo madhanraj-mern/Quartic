@@ -1,0 +1,562 @@
+/* ===========================================
+   COMPREHENSIVE MOBILE RESPONSIVE STYLES
+   =========================================== */
+
+/* ===========================================
+   GLOBAL MOBILE OPTIMIZATIONS
+   =========================================== */
+
+/* Ensure proper viewport handling */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===========================================
+   MOBILE-FIRST CONTAINER SYSTEM
+   =========================================== */
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 576px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* ===========================================
+   MOBILE TYPOGRAPHY
+   =========================================== */
+
+/* Mobile-first typography scaling */
+h1, .h1 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+h2, .h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+h3, .h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+h4, .h4 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+h5, .h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h6, .h6 {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+p, .p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Tablet typography */
+@media (min-width: 768px) {
+  h1, .h1 { font-size: 2.25rem; }
+  h2, .h2 { font-size: 2rem; }
+  h3, .h3 { font-size: 1.5rem; }
+  h4, .h4 { font-size: 1.25rem; }
+  h5, .h5 { font-size: 1.125rem; }
+  h6, .h6 { font-size: 1rem; }
+}
+
+/* Desktop typography */
+@media (min-width: 1200px) {
+  h1, .h1 { font-size: 3rem; }
+  h2, .h2 { font-size: 2.5rem; }
+  h3, .h3 { font-size: 1.75rem; }
+  h4, .h4 { font-size: 1.5rem; }
+  h5, .h5 { font-size: 1.25rem; }
+  h6, .h6 { font-size: 1.125rem; }
+}
+
+/* ===========================================
+   MOBILE LAYOUT IMPROVEMENTS
+   =========================================== */
+
+/* Mobile grid system */
+@media (max-width: 767px) {
+  .row {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  
+  .col,
+  [class*="col-"] {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  /* Stack columns on mobile */
+  .col-md-6,
+  .col-lg-4,
+  .col-lg-6,
+  .col-lg-8 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ===========================================
+   MOBILE NAVIGATION IMPROVEMENTS
+   =========================================== */
+
+@media (max-width: 991px) {
+  /* Hide desktop navigation */
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  /* Show mobile navigation */
+  .mobile-nav {
+    display: block !important;
+  }
+  
+  /* Mobile header adjustments */
+  .header {
+    padding: 1rem 0;
+  }
+  
+  .header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header .logo {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Hide mobile navigation on desktop */
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  /* Show desktop navigation */
+  .desktop-nav {
+    display: block !important;
+  }
+}
+
+/* ===========================================
+   MOBILE BUTTON IMPROVEMENTS
+   =========================================== */
+
+/* Touch-friendly buttons */
+@media (max-width: 768px) {
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    touch-action: manipulation;
+  }
+  
+  .btn-sm {
+    min-height: 36px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .btn-lg {
+    min-height: 52px;
+    padding: 16px 24px;
+    font-size: 18px;
+  }
+}
+
+/* ===========================================
+   MOBILE FORM IMPROVEMENTS
+   =========================================== */
+
+@media (max-width: 768px) {
+  .form-control {
+    min-height: 44px;
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ===========================================
+   MOBILE CARD IMPROVEMENTS
+   =========================================== */
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* ===========================================
+   MOBILE IMAGE IMPROVEMENTS
+   =========================================== */
+
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .img-fluid {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive images with proper aspect ratios */
+  .ratio {
+    position: relative;
+    width: 100%;
+  }
+  
+  .ratio::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+  }
+  
+  .ratio img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ===========================================
+   MOBILE SECTION SPACING
+   =========================================== */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .section-sm {
+    padding: 2rem 0;
+  }
+  
+  .section-lg {
+    padding: 4rem 0;
+  }
+  
+  .py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  .py-4 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* ===========================================
+   MOBILE HERO SECTION
+   =========================================== */
+
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 60vh;
+    padding: 2rem 0;
+  }
+  
+  .hero-content {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .hero-main-headingtext {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ===========================================
+   MOBILE IWS SECTION
+   =========================================== */
+
+@media (max-width: 768px) {
+  .home_iws_sec {
+    padding: 2rem 0;
+  }
+  
+  .home_iws_sec .main-slide-image {
+    height: 300px;
+    min-height: 300px;
+    margin-bottom: 2rem;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_content {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: none;
+  }
+  
+  .home_iws_sec .iws_tab_nav_wrap {
+    position: static;
+    margin-top: 1rem;
+  }
+}
+
+/* ===========================================
+   MOBILE CUSTOMER PROOFS SECTION
+   =========================================== */
+
+@media (max-width: 768px) {
+  .testimonial_section {
+    padding: 2rem 0;
+  }
+  
+  .testimonial_image_holder {
+    height: 250px;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial_block {
+    padding: 1.5rem;
+  }
+  
+  .testimonial_content {
+    text-align: center;
+  }
+}
+
+/* ===========================================
+   MOBILE FOOTER
+   =========================================== */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+  
+  .footer .row {
+    text-align: center;
+  }
+  
+  .footer .col-md-3,
+  .footer .col-md-4 {
+    margin-bottom: 2rem;
+  }
+  
+  .footer .social-links {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+/* ===========================================
+   MOBILE ANIMATIONS
+   =========================================== */
+
+/* Reduce animations on mobile for better performance */
+@media (max-width: 768px) {
+  * {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.3s !important;
+  }
+  
+  /* Disable hover effects on touch devices */
+  .hover-effect:hover {
+    transform: none !important;
+  }
+  
+  /* Simplify complex animations */
+  .fade-in,
+  .slide-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ===========================================
+   MOBILE UTILITIES
+   =========================================== */
+
+/* Mobile-only utilities */
+@media (max-width: 767px) {
+  .mobile-hidden { display: none !important; }
+  .mobile-visible { display: block !important; }
+  .mobile-text-center { text-align: center !important; }
+  .mobile-text-left { text-align: left !important; }
+  .mobile-text-right { text-align: right !important; }
+  .mobile-mb-0 { margin-bottom: 0 !important; }
+  .mobile-mb-1 { margin-bottom: 0.5rem !important; }
+  .mobile-mb-2 { margin-bottom: 1rem !important; }
+  .mobile-mb-3 { margin-bottom: 1.5rem !important; }
+  .mobile-mb-4 { margin-bottom: 2rem !important; }
+  .mobile-p-0 { padding: 0 !important; }
+  .mobile-p-1 { padding: 0.5rem !important; }
+  .mobile-p-2 { padding: 1rem !important; }
+  .mobile-p-3 { padding: 1.5rem !important; }
+  .mobile-p-4 { padding: 2rem !important; }
+}
+
+/* Desktop-only utilities */
+@media (min-width: 768px) {
+  .desktop-hidden { display: none !important; }
+  .desktop-visible { display: block !important; }
+}
+
+/* ===========================================
+   MOBILE PERFORMANCE OPTIMIZATIONS
+   =========================================== */
+
+/* Optimize for mobile performance */
+@media (max-width: 768px) {
+  /* Reduce box shadows for better performance */
+  .card,
+  .btn,
+  .form-control {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Simplify gradients */
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  /* Reduce blur effects */
+  .blur-effect {
+    filter: none !important;
+  }
+}
+
+/* ===========================================
+   MOBILE ACCESSIBILITY
+   =========================================== */
+
+/* Improve accessibility on mobile */
+@media (max-width: 768px) {
+  /* Ensure sufficient color contrast */
+  .text-muted {
+    color: #6c757d !important;
+  }
+  
+  /* Improve focus indicators */
+  .btn:focus,
+  .form-control:focus,
+  .nav-link:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+  
+  /* Ensure readable font sizes */
+  .small {
+    font-size: 0.875rem;
+  }
+  
+  .text-small {
+    font-size: 0.875rem;
+  }
+}
+
+/* ===========================================
+   MOBILE PRINT STYLES
+   =========================================== */
+
+@media print {
+  .mobile-nav,
+  .desktop-nav,
+  .btn,
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  .page-break {
+    page-break-before: always;
+  }
+}

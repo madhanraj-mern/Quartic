@@ -1,0 +1,220 @@
+/* Accordion Dropdown Fix - Ensure proper functionality */
+
+/* ===========================================
+   ACCORDION FUNCTIONALITY FIXES
+   =========================================== */
+
+/* Ensure accordion buttons are clickable */
+.accordion-button {
+  cursor: pointer !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
+
+/* Fix accordion button focus states */
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+  border-color: #86b7fe !important;
+}
+
+/* Ensure proper transition for accordion collapse */
+.accordion-collapse {
+  transition: height 0.35s ease !important;
+}
+
+/* Fix accordion collapse show state */
+.accordion-collapse.show {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Ensure accordion collapse is hidden by default */
+.accordion-collapse:not(.show) {
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Fix accordion button collapsed state */
+.accordion-button.collapsed {
+  background-color: transparent !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff !important;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125) !important;
+}
+
+/* Fix accordion button arrow rotation */
+.accordion-button::after {
+  transition: transform 0.2s ease-in-out !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(-180deg) !important;
+}
+
+/* ===========================================
+   SPECIFIC ACCORDION STYLES
+   =========================================== */
+
+/* Card Accordion Fixes */
+.accordion.card-accordion .accordion-button {
+  background-color: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.accordion.card-accordion .accordion-button:hover {
+  background-color: #f8f9fa !important;
+}
+
+.accordion.card-accordion .accordion-button:not(.collapsed) {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Common Flex Card Accordion Fixes */
+.accordion.comn_flex_card_accordion .accordion-button {
+  background: linear-gradient(178.7deg, #ffffff 1.11%, #8e8e8e 137.21%) !important;
+  border: none !important;
+  transition: all 0.3s linear !important;
+}
+
+.accordion.comn_flex_card_accordion .accordion-button:not(.collapsed) {
+  background-color: #000000 !important;
+  background-image: none !important;
+}
+
+.accordion.comn_flex_card_accordion .accordion-button:not(.collapsed) .heading_text {
+  color: #ffffff !important;
+}
+
+.accordion.comn_flex_card_accordion .accordion-button:not(.collapsed) .accordion_btn_content .icon_holder img {
+  filter: none !important;
+}
+
+/* Common Application Accordion Fixes */
+.accordion.comn_apl_accordion .accordion-button {
+  background: linear-gradient(178.7deg, #ffffff 1.11%, #8e8e8e 137.21%) !important;
+  border: none !important;
+  transition: all 0.3s linear !important;
+}
+
+.accordion.comn_apl_accordion .accordion-button:not(.collapsed) {
+  background-color: #000000 !important;
+  background-image: none !important;
+}
+
+.accordion.comn_apl_accordion .accordion-button:not(.collapsed) .heading_text {
+  color: #ffffff !important;
+}
+
+.accordion.comn_apl_accordion .accordion-button:not(.collapsed) .accordion_btn_content .icon_holder img {
+  filter: none !important;
+}
+
+/* WhyMOM Accordion Fixes */
+.accordion.whymom_accordion .accordion-button {
+  background-color: #000000 !important;
+  border: none !important;
+  color: #ffffff !important;
+  transition: all 0.3s linear !important;
+}
+
+.accordion.whymom_accordion .accordion-button:not(.collapsed) {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Experience Accordion Fixes */
+.accordion.exp_accordion .accordion-button {
+  background-color: #000000 !important;
+  border: none !important;
+  color: #ffffff !important;
+  transition: all 0.3s linear !important;
+}
+
+.accordion.exp_accordion .accordion-button:not(.collapsed) {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* ===========================================
+   MOBILE ACCORDION FIXES
+   =========================================== */
+
+@media (max-width: 768px) {
+  .accordion-button {
+    padding: 12px 16px !important;
+    font-size: 16px !important;
+    min-height: 48px !important;
+  }
+  
+  .accordion-body {
+    padding: 16px !important;
+  }
+  
+  .accordion-item {
+    margin-bottom: 8px !important;
+  }
+}
+
+/* ===========================================
+   ACCESSIBILITY IMPROVEMENTS
+   =========================================== */
+
+/* Ensure proper focus indicators */
+.accordion-button:focus-visible {
+  outline: 2px solid #0d6efd !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure proper ARIA states */
+.accordion-button[aria-expanded="true"] {
+  background-color: #e7f1ff !important;
+}
+
+.accordion-button[aria-expanded="false"] {
+  background-color: transparent !important;
+}
+
+/* ===========================================
+   ANIMATION IMPROVEMENTS
+   =========================================== */
+
+/* Smooth accordion collapse animation */
+.accordion-collapse {
+  transition: height 0.35s ease, padding 0.35s ease !important;
+}
+
+/* Smooth button state transitions */
+.accordion-button {
+  transition: all 0.3s ease !important;
+}
+
+/* Smooth arrow rotation */
+.accordion-button::after {
+  transition: transform 0.2s ease-in-out !important;
+}
+
+/* ===========================================
+   DEBUGGING HELPERS (Remove in production)
+   =========================================== */
+
+/* Uncomment for debugging */
+/*
+.accordion-button {
+  border: 2px solid red !important;
+}
+
+.accordion-collapse {
+  border: 2px solid blue !important;
+}
+
+.accordion-collapse.show {
+  border: 2px solid green !important;
+}
+*/

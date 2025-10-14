@@ -14,7 +14,7 @@ const InsightsSection = ({ homepage }) => {
   useVideoAutoPlayOnView(videoRef);
 
   // Use Strapi data with fallbacks
-  const howItWorksData = homepage?.howItWorks || {};
+  const howItWorksData = homepage?.HowItWorks || {};
   const title = howItWorksData.title || 'How It Works';
   const subtitle = howItWorksData.subtitle || 'AI-driven Optimization Needs Context';
   const description = howItWorksData.description || 'AI in manufacturing is only as good as the data it runs on. Quartic contextualizes OT data, enabling faster, smarter decisions across MOM workflows.';

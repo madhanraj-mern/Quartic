@@ -1,0 +1,231 @@
+/* Real Results Grid Section CSS Fixes */
+
+/* Performance optimizations */
+.real-results-grid-section {
+  contain: layout style paint !important;
+  will-change: auto !important;
+}
+
+.real-results-grid-section * {
+  backface-visibility: hidden !important;
+  transform: translateZ(0) !important;
+}
+.real-results-grid-section .left_navigation {
+  font-size: 16px !important;
+  font-family: "Red Hat Text", sans-serif !important;
+  color: rgb(56, 62, 69) !important;
+  line-height: 24px !important;
+  text-decoration: rgb(56, 62, 69) !important;
+  width: 264.031px !important;
+  height: 100vh !important;
+  border: 0px none rgb(56, 62, 69) !important;
+  padding: 75px 0px !important;
+  min-height: 100vh !important;
+  max-width: 100% !important;
+  min-width: auto !important;
+  position: sticky !important;
+  top: 0 !important;
+  display: flex !important;
+  border-spacing: 0px !important;
+  transition: none !important; /* Removed transition to prevent glitches */
+  outline: rgb(56, 62, 69) none 0px !important;
+  box-sizing: border-box !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.real-results-grid-section .tag_lightBlue {
+  display: inline-block !important;
+  background: #e3f2fd !important;
+  color: #1976d2 !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 20px !important;
+}
+
+.real-results-grid-section .section_title {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  color: rgb(56, 62, 69) !important;
+  font-family: "Red Hat Text", sans-serif !important;
+  margin: 0 0 40px 0 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.real-results-grid-section .industry_list {
+  margin-bottom: 40px !important;
+}
+
+.real-results-grid-section .industry_item {
+  color: rgb(56, 62, 69) !important;
+  font-size: 18px !important;
+  font-family: "Red Hat Text", sans-serif !important;
+  line-height: 1.3 !important;
+  margin-bottom: 8px !important;
+  padding: 6px 0 !important;
+  cursor: pointer !important;
+  transition: color 0.2s ease !important; /* Simplified transition */
+  position: relative !important;
+  scroll-margin-top: 20px !important;
+  scroll-margin-bottom: 20px !important;
+}
+
+.real-results-grid-section .industry_item.active {
+  color: #ff6a00 !important;
+  text-decoration: underline !important;
+}
+
+.real-results-grid-section .industry_item:hover {
+  color: #ff6a00 !important;
+  text-decoration: underline !important;
+}
+
+.real-results-grid-section .cta_heading {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: rgb(56, 62, 69) !important;
+  font-family: "Red Hat Text", sans-serif !important;
+  margin: 0 0 30px 0 !important;
+  line-height: 1.2 !important;
+}
+
+.real-results-grid-section .cta_button {
+  background: #ff6a00 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 16px 32px !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+}
+
+.real-results-grid-section .cta_button:hover {
+  background: #e55a00 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.3) !important;
+}
+
+.real-results-grid-section .real_results_row {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 40px !important;
+  overflow: visible !important;
+  flex-direction: row !important;
+  width: 100% !important;
+}
+
+.real-results-grid-section .real_results_col_4 {
+  flex: 0 0 33.333333% !important;
+  max-width: 33.333333% !important;
+  display: block !important;
+  width: 33.333333% !important;
+}
+
+.real-results-grid-section .real_results_col_8 {
+  flex: 0 0 66.666667% !important;
+  max-width: 66.666667% !important;
+  display: block !important;
+  width: 66.666667% !important;
+}
+
+.real-results-grid-section .cards_grid_container {
+  position: relative !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-left: 10px !important; /* Changed from padding-right to padding-left */
+  scroll-behavior: auto !important; /* Changed to auto to prevent glitches */
+  direction: rtl !important; /* Reverse direction to move scrollbar to left */
+  
+  /* Custom scrollbar styling */
+  scrollbar-width: thin !important;
+  scrollbar-color: #ff6a00 #f0f0f0 !important;
+}
+
+.real-results-grid-section .cards_grid_container::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.real-results-grid-section .cards_grid_container::-webkit-scrollbar-track {
+  background: #f0f0f0 !important;
+  border-radius: 4px !important;
+}
+
+.real-results-grid-section .cards_grid_container::-webkit-scrollbar-thumb {
+  background: #ff6a00 !important;
+  border-radius: 4px !important;
+}
+
+.real-results-grid-section .cards_grid_container::-webkit-scrollbar-thumb:hover {
+  background: #e55a00 !important;
+}
+
+
+.real-results-grid-section .cards_grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 20px !important;
+  min-height: 100% !important;
+  position: relative !important;
+  width: 100% !important;
+  padding-bottom: 20px !important;
+  direction: ltr !important; /* Reset direction for grid content */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .real-results-grid-section .left_navigation {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 40px 0px !important;
+  }
+  
+  .real-results-grid-section .section_title {
+    font-size: 36px !important;
+    margin-bottom: 30px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .real-results-grid-section .cta_heading {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .real-results-grid-section .real_results_row {
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+  
+  .real-results-grid-section .real_results_col_4,
+  .real-results-grid-section .real_results_col_8 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  .real-results-grid-section .cards_grid_container {
+    height: auto !important;
+    overflow: visible !important;
+    padding-left: 0 !important; /* Changed from padding-right to padding-left */
+    direction: ltr !important; /* Reset direction for mobile */
+  }
+  
+  
+  .real-results-grid-section .cards_grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    padding-bottom: 0 !important;
+  }
+}

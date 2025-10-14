@@ -13,11 +13,10 @@ import reliabilityMaintenanceImg from '../assets/images/about/people/about_peopl
 import digitalTransformationImg from '../assets/images/about/people/about_people_item_img5.jpg';
 
 const StyledSection = styled.section`
-  padding: 100px 0;
   background: #000000;
   position: relative;
   overflow: hidden;
-  
+
   .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -34,340 +33,355 @@ const StyledSection = styled.section`
     }
   }
 
-  .stakeholders_wrapper {
-    display: flex;
-    gap: 0;
-    align-items: flex-start;
-    min-height: 600px;
-    position: relative;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      left: 30%;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background: rgb(50, 50, 50);
-      z-index: 1;
+  .one_side_full_container {
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .gx-0 {
+    --bs-gutter-x: 0;
+  }
+
+  .osfc_left_col {
+    @media (max-width: 991px) {
+      width: 100%;
     }
     
-    @media (max-width: 1200px) {
-      flex-direction: column;
-      gap: 60px;
+    .left_top_content {
+      padding-top: 55px;
+      padding-right: 30px;
       
-      &::after {
+      @media (min-width: 768px) {
+        padding-top: 65px;
+        padding-right: 30px;
+      }
+      
+      @media (min-width: 992px) {
+        padding-top: 98px;
+      }
+      
+      .h3_heading_text {
+        @media (min-width: 992px) {
+          font-size: 28px;
+        }
+        @media (min-width: 1800px) {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+  .osfc_right_col {
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+  }
+
+  .roles_slider_holder {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    position: relative;
+    
+    @media (min-width: 768px) {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+    
+    @media (min-width: 992px) {
+      padding-top: 60px;
+      padding-left: 30px;
+    }
+    
+    @media (min-width: 1200px) {
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+    
+    .divider_line {
+      left: 0;
+      top: 0;
+      bottom: 0;
+      opacity: 0.4 !important;
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(151, 214, 223, 0.5);
+      
+      @media (max-width: 991px) {
         display: none;
       }
     }
   }
 
-  .left_content {
-    flex: 0 0 30%;
-    padding-right: 40px;
-    position: relative;
-    z-index: 2;
-    
-    .tag_lightBlue {
-      display: inline-block;
-      background: #C6E8F0;
-      color: #000000;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 32px;
-    }
-    
-    .h2_heading_text {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #ffffff;
-      margin: 0;
-      letter-spacing: -0.02em;
-      
-      @media (max-width: 768px) {
-        font-size: 28px;
-      }
-    }
-    
-    @media (max-width: 1200px) {
-      flex: 1;
-      padding-right: 0;
-    }
-  }
-
-  .right_content {
-    flex: 0 0 70%;
-    padding-left: 40px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    z-index: 2;
-    
-    @media (max-width: 1200px) {
-      flex: 1;
-      padding-left: 0;
-      gap: 30px;
-    }
-  }
-
-  .tabs_container {
+  .roles_slider_container {
     width: 100%;
-    margin-bottom: 0;
-    position: relative;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: rgb(50, 50, 50);
-    }
   }
 
-  .tabs_list {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin-bottom: 0;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    padding-bottom: 16px;
-    overflow-x: auto;
-    
-    @media (max-width: 1200px) {
-      gap: 25px;
-    }
-    
-    @media (max-width: 768px) {
-      gap: 20px;
-    }
-  }
+  .roles_thumb_slider {
+    .splide__slide {
+      position: relative;
+      cursor: pointer;
+      padding: 0 10px 16px 0;
+      background: none;
+      border: none;
+      outline: none;
+      transition: color 0.3s;
+      display: flex;
+      flex-direction: column;
+      border: none !important;
+      justify-content: flex-end;
 
-  .tab_button {
-    background: none;
-    border: none;
-    color: #969696;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 12px 0;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
-    text-align: left;
-    white-space: nowrap;
-    flex-shrink: 0;
-    min-width: max-content;
-    
-    &:hover {
-      color: #FF6600;
-    }
-    
-    &.active {
-      color: #FF6600;
-      font-weight: 600;
-      
+      .thumb_nav_text {
+        color: rgba(255, 255, 255, 0.57);
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+        
+        @media (min-width: 768px) {
+          font-size: 22px;
+          line-height: 27px;
+        }
+        
+        @media (min-width: 1400px) {
+          font-size: 26px;
+          line-height: 29px;
+        }
+        
+        @media (min-width: 1800px) {
+          font-size: 32px;
+          line-height: 36px;
+        }
+        
+        @media (max-width: 767px) {
+          br {
+            display: none;
+          }
+        }
+      }
+
       &::after {
-        content: '';
+        content: "";
+        height: 2px;
+        width: 100%;
         position: absolute;
-        bottom: -16px;
+        background: rgba(217, 217, 217, 1);
+        transform: scaleX(1);
         left: 0;
+        bottom: 0;
         right: 0;
-        height: 3px;
-        background: #FF6600;
-        border-radius: 2px;
+        z-index: 0;
       }
     }
     
-    @media (max-width: 1200px) {
-      font-size: 15px;
-    }
-    
-    @media (max-width: 768px) {
-      font-size: 14px;
-      padding: 10px 0;
-    }
-  }
-
-  .content_area {
-    position: relative;
-    min-height: 400px;
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    margin-top: 50px;
-    
-    @media (max-width: 1200px) {
-      flex-direction: column;
-      gap: 30px;
-    }
-  }
-
-  .content_item {
-    flex: 1;
-    max-width: 350px;
-    opacity: 0;
-    transform: translateX(20px);
-    transition: all 0.4s ease;
-    
-    &.active {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .content_heading {
-    font-size: 22px;
-    font-weight: 400;
-    color: #ffffff;
-    margin: 0 0 30px 0;
-    line-height: 1.3;
-    
-    @media (max-width: 768px) {
-      font-size: 20px;
-    }
-  }
-
-  .content_bullets {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-  }
-
-  .bullet_item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 16px;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1.5;
-    
-    .check_icon {
-      width: 18px;
-      height: 18px;
-      background: transparent;
-      border: 2px solid #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
+    .splide__slide.is-active {
+      border: none;
       
-      &::before {
-        content: '✓';
-        color: white;
-        font-size: 10px;
-        font-weight: bold;
+      .thumb_nav_text {
+        color: #f15a29;
+      }
+    }
+    
+    .underline {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: #f15a29;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+      z-index: 1;
+    }
+    
+    .splide__slide.is-active .underline {
+      transform: scaleX(1);
+      transition: transform 6s linear;
+      background-color: #f15a29;
+    }
+  }
+
+  .roles_main_slider {
+    position: relative;
+    padding-top: 20px;
+    overflow: hidden;
+    
+    @media (min-width: 768px) {
+      padding-top: 46px;
+    }
+    
+    @media (min-width: 992px) {
+      .col-lg-5 {
+        flex: 0 0 auto;
+        width: 47%;
+      }
+      .col-lg-7 {
+        flex: 0 0 auto;
+        width: 53%;
+      }
+    }
+  }
+
+  .roles_main_slider_content {
+    width: 100%;
+
+    .dsc_content {
+      width: 100%;
+      
+      .comn_dsc_text_white {
+        h2, h3, h4, h5, h6 {
+          font-size: 18px;
+          line-height: 1.3;
+          font-weight: 500;
+          color: #ffffff;
+          margin-bottom: 25px;
+          
+          @media (min-width: 992px) {
+            font-size: 20px;
+            margin-bottom: 45px;
+          }
+          
+          @media (min-width: 1800px) {
+            font-size: 24px;
+          }
+        }
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+          margin-top: 10px;
+          position: relative;
+          padding-left: 30px;
+          
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background-image: url('../assets/images/icons/check-white.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+          }
+          
+          p {
+            color: #ffffff;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.4;
+          }
+        }
+      }
+      
+      .link_holder {
+        margin-top: 30px;
+        
+        @media (min-width: 992px) {
+          margin-top: 50px;
+        }
+      }
+      
+      .link_text {
+        font-size: 18px;
+        
+        @media (min-width: 1800px) {
+          font-size: 22px;
+        }
+      }
+    }
+    
+    .img_holder {
+      box-shadow: 0px 4px 54px 0px rgba(0, 0, 0, 0.05);
+      width: 100%;
+
+      .ratio {
+        &::before {
+          padding-top: calc(370 / 550 * 100%);
+        }
       }
     }
   }
 
   .read_more_link {
-    color: #FF6600;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 400;
     font-size: 16px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
-    margin-bottom: 30px;
     
     &:hover {
-      color: #e55a00;
+      color: #f15a29;
       
-      .arrow_icon {
+      .read_more_link_arrow {
         transform: translateX(4px);
       }
     }
     
-    .arrow_icon {
+    .read_more_link_arrow {
       transition: transform 0.3s ease;
+      width: 20px;
+      height: 20px;
+      background: url('../assets/images/icons/arrow-right-white.svg') no-repeat center center;
+      background-size: contain;
     }
   }
 
-  .navigation_arrows {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-    align-self: flex-start;
-    
-    .arrow_button {
-      background: none;
-      border: none;
-      color: #ffffff;
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 24px;
-      
-      &:hover {
-        color: #FF6600;
-      }
-      
-      &:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-      }
-    }
+  .tag_lightBlue {
+    display: inline-block;
+    background: #C6E8F0;
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
   }
 
-  .stakeholder_image {
-    width: 300px;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-    flex-shrink: 0;
-    position: relative;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 60px;
-      background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
-      border-radius: 0 8px 8px 0;
-    }
-    
-    @media (max-width: 1200px) {
-      width: 100%;
-      height: 350px;
-    }
-    
-    @media (max-width: 768px) {
-      height: 250px;
-    }
+  .h3_heading_text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
   }
 `;
 
-const StakeholdersSection = ({ homepage }) => {
-  const [activeTab, setActiveTab] = useState(3); // Reliability & Maintenance is active by default
+const StakeholdersSection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
+  // Use Strapi data with fallbacks
+  const stakeholdersData = data || homepage?.stakeholders || {};
+  const title = stakeholdersData.title || 'Stakeholders';
+  const subtitle = stakeholdersData.subtitle || 'Built for Every Role';
+  const description = stakeholdersData.description || 'Comprehensive solutions designed for every role in manufacturing operations.';
+  
+  // Debug logging
+  console.log('StakeholdersSection - homepage:', homepage);
+  console.log('StakeholdersSection - stakeholdersData:', stakeholdersData);
+  const [activeTab, setActiveTab] = useState(0); // Process Engineers is active by default
 
-  // Default stakeholders data
+  // Default stakeholders data - matching original HTML content
   const defaultStakeholders = [
     {
       id: 0,
       title: 'Process Engineers',
-      heading: 'Monitor, analyze, and tune live processes with contextual AI.',
+      heading: 'Monitor, analyze, and tune processes in real time with contextual AI support.',
       bullets: [
-        'Optimize control strategies during live production',
+        'Optimize control strategies on live production',
         'Identify root causes faster with MVDA',
         'Eliminate guesswork in process tuning'
       ],
@@ -375,45 +389,45 @@ const StakeholdersSection = ({ homepage }) => {
     },
     {
       id: 1,
-      title: 'Data Analyst',
-      heading: 'Unlock insights from complex manufacturing data streams.',
+      title: 'Data Scientists',
+      heading: 'Leverage clean, contextualized OT/IT data to deploy AI models that scale.',
       bullets: [
-        'Integrate data from multiple sources and systems',
-        'Apply advanced analytics and machine learning models',
-        'Generate actionable insights and reports'
+        'Access ready-to-use industrial datasets',
+        'Apply models with faster validation cycles',
+        'Reduce model-to-impact lag time'
       ],
       image: dataAnalystImg
     },
     {
       id: 2,
-      title: 'Quality & Compliance',
-      heading: 'Gain real-time visibility and control over product quality.',
+      title: 'IT & Enterprise Architects',
+      heading: 'Securely bridge OT and IT with a scalable, governed data infrastructure.',
       bullets: [
-        'Automate CPV and deviation detection workflows',
-        'Reduce release time through live quality insights',
-        'Ensure GMP and CFR21-compliant traceability'
+        'Integrate edge, cloud, and enterprise systems',
+        'Maintain compliance and data lineage',
+        'Avoid vendor lock-in with open standards'
       ],
       image: qualityComplianceImg
     },
     {
       id: 3,
-      title: 'Reliability & Maintenance',
-      heading: 'Predict and prevent equipment failures before they occur.',
+      title: 'Digital Transformation Leaders',
+      heading: 'Turn digital strategy into measurable plant-level impact — quickly and at scale.',
       bullets: [
-        'Implement predictive maintenance strategies',
-        'Monitor equipment health in real-time',
-        'Reduce unplanned downtime and maintenance costs'
+        'Connect strategy to real operational KPIs',
+        'Accelerate time-to-impact from months to weeks',
+        'Build a culture of informed decision-making'
       ],
       image: reliabilityMaintenanceImg
     },
     {
       id: 4,
-      title: 'Digital Transformation',
-      heading: 'Accelerate your digital transformation journey.',
+      title: 'Quality Teams',
+      heading: 'Gain real-time visibility into quality metrics across batches and sites.',
       bullets: [
-        'Modernize legacy systems and processes',
-        'Implement Industry 4.0 technologies',
-        'Drive operational excellence through data'
+        'Automate CPV and deviation detection',
+        'Shorten batch release and investigation cycles',
+        'Ensure CFR21 and GMP traceability'
       ],
       image: digitalTransformationImg
     }
@@ -466,118 +480,95 @@ const StakeholdersSection = ({ homepage }) => {
   const activeStakeholder = stakeholders[activeTab];
 
   return (
-    <StyledSection>
-      <div className="container">
-        <div className="stakeholders_wrapper">
-          <div className="left_content">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.6 }}
-              data-aos="fade-up"
-              data-aos-duration="800"
-              data-aos-delay="100"
-            >
-              <span className="tag_lightBlue lh-base tag-mb-20px">Who Is It For</span>
-              <h2 className="h3_heading_text fw-medium text-white text-start">
-                Built for Regulated Operations
-              </h2>
-            </motion.div>
-          </div>
-
-          <div className="right_content">
-            <motion.div
-              className="tabs_container"
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              data-aos="fade-up"
-              data-aos-duration="800"
-              data-aos-delay="200"
-            >
-              <div className="tabs_list">
-                {stakeholders.map((stakeholder) => (
-                  <button
-                    key={stakeholder.id}
-                    className={`tab_button ${activeTab === stakeholder.id ? 'active' : ''}`}
-                    onClick={() => handleTabClick(stakeholder.id)}
-                  >
-                    {stakeholder.title}
-                  </button>
-                ))}
+    <StyledSection className="home_roles_sec bg-black">
+      <div className="container one_side_full_container pe-0 ms-auto me-0">
+        <div className="row gx-0">
+          <div className="osfc_left_col d-flex flex-column">
+            <div className="left_top_content">
+              <div className="sec_heading_wrap">
+                <div className="sec_heading_holder">
+                  <span className="tag_lightBlue lh-base tag-mb-20px">Roles</span>
+                  <h2 className="h3_heading_text fw-medium text-white split_text words_slide_from_right">
+                    Quartic Built for every stakeholders
+                  </h2>
+                </div>
               </div>
-            </motion.div>
-
-            <div className="content_area">
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.6 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                data-aos="fade-up"
-                data-aos-duration="800"
-                data-aos-delay="300"
-              >
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeTab}
-                    className={`content_item ${activeTab === activeStakeholder.id ? 'active' : ''}`}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <h3 className="content_heading">
-                      {activeStakeholder.heading}
-                    </h3>
-                    
-                    <ul className="content_bullets">
-                      {activeStakeholder.bullets.map((bullet, index) => (
-                        <li key={index} className="bullet_item">
-                          <div className="check_icon"></div>
-                          <span>{bullet}</span>
-                        </li>
+            </div>
+          </div>
+          <div className="osfc_right_col">
+            <div className="roles_slider_holder">
+              <div className="divider_line anim-item-clipDown-line"></div>
+              <div className="roles_slider_container">
+                {/* Thumb Slider */}
+                <div className="roles_thumb_slider">
+                  <div className="splide__track">
+                    <div className="splide__list">
+                      {stakeholders.map((stakeholder) => (
+                        <div 
+                          key={stakeholder.id}
+                          className={`splide__slide ${activeTab === stakeholder.id ? 'is-active' : ''}`}
+                          onClick={() => handleTabClick(stakeholder.id)}
+                        >
+                          <span className="thumb_nav_text">
+                            {stakeholder.title.includes(' ') ? 
+                              stakeholder.title.split(' ').map((word, index) => 
+                                index === 0 ? word : <><br key={index} />{word}</>
+                              ) : 
+                              stakeholder.title
+                            }
+                          </span>
+                          <div className="underline"></div>
+                        </div>
                       ))}
-                    </ul>
-                    
-                    <a href="#" className="read_more_link">
-                      Read More
-                      <span className="arrow_icon">→</span>
-                    </a>
-
-                    <div className="navigation_arrows">
-                      <button 
-                        className="arrow_button"
-                        onClick={handlePrevious}
-                        aria-label="Previous stakeholder"
-                      >
-                        ←
-                      </button>
-                      <button 
-                        className="arrow_button"
-                        onClick={handleNext}
-                        aria-label="Next stakeholder"
-                      >
-                        →
-                      </button>
                     </div>
-                  </motion.div>
-                </AnimatePresence>
-              </motion.div>
-
-              <motion.div
-                className="stakeholder_image"
-                style={{ backgroundImage: `url(${activeStakeholder.image})` }}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.6 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                data-aos="fade-up"
-                data-aos-duration="800"
-                data-aos-delay="400"
-              />
+                  </div>
+                </div>
+                {/* Main Slider */}
+                <div className="roles_main_slider">
+                  <div className="row gx-0 gy-4 gy-lg-0">
+                    <div className="col-lg-5 pe-lg-4">
+                      <div className="roles_main_slider_content">
+                        <div className="dsc_content_holder">
+                          <div className="dsc_content">
+                            <div className="comn_dsc_text_white">
+                              <h3>{activeStakeholder.heading}</h3>
+                              <ul>
+                                {activeStakeholder.bullets.map((bullet, index) => (
+                                  <li key={index}>
+                                    <p>{bullet}</p>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            <div className="link_holder">
+                              <a href="#" className="read_more_link d-inline-block">
+                                <span className="d-flex align-items-center">
+                                  <div className="read_more_link_text">Read More</div>
+                                  <div className="read_more_link_arrow"></div>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-7">
+                      <div className="roles_main_slider_content">
+                        <div className="img_holder">
+                          <div className="ratio">
+                            <img 
+                              className="object-fit-cover" 
+                              src={activeStakeholder.image}
+                              loading="lazy" 
+                              alt={activeStakeholder.title} 
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

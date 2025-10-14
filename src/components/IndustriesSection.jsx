@@ -8,7 +8,17 @@ import chemicalsImg from '../assets/images/home/iws/iws-slider-img4.jpg';
 import cpgImg from '../assets/images/home/iws/iws-slider-img2.jpg';
 import foodImg from '../assets/images/home/iws/iws-slider-img3.jpg';
 
-const IndustriesSection = () => {
+const IndustriesSection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
+  // Use Strapi data with fallbacks
+  const industriesData = data || homepage?.industries || {};
+  const title = industriesData.title || 'Industries';
+  const subtitle = industriesData.subtitle || 'Industry-Specific Solutions';
+  const description = industriesData.description || 'Comprehensive solutions tailored for different manufacturing industries.';
+  
+  // Debug logging
+  console.log('IndustriesSection - homepage:', homepage);
+  console.log('IndustriesSection - industriesData:', industriesData);
+
   // Default industries data
   const defaultIndustries = [
     {

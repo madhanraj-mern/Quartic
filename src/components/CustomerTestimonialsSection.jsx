@@ -4,10 +4,20 @@ import quoteIcon from '../assets/images/icons/quote-gray-icon.svg';
 import testimonialImg from '../assets/images/home/testimonial-slide-img.jpg';
 import authorImg from '../assets/images/home/author-img.png';
 
-const CustomerTestimonialsSection = () => {
+const CustomerTestimonialsSection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
   const [currentSlide, setCurrentSlide] = useState(4); // Show the 5th testimonial (UX one)
   
-  const testimonials = [
+  // Use Strapi data with fallbacks
+  const testimonialsData = data || homepage?.customerTestimonials || {};
+  const title = testimonialsData.title || 'Customer Testimonials';
+  const subtitle = testimonialsData.subtitle || 'What Our Customers Say';
+  const description = testimonialsData.description || 'Hear from industry leaders who have transformed their manufacturing operations with Quartic.';
+  
+  // Debug logging
+  console.log('CustomerTestimonialsSection - homepage:', homepage);
+  console.log('CustomerTestimonialsSection - testimonialsData:', testimonialsData);
+  
+  const testimonials = testimonialsData.testimonials || [
     {
       quote: "With Quartic PD Optimizer, we reduced the number of wet-lab experiments by 33%.",
       description: "Quartic's platform helped accelerate process development by reducing time spent in wet-lab testing and speeding up decision-making cycles.",

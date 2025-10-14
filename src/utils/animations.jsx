@@ -15,7 +15,7 @@ export const slideFromRightVariants = {
   visible: { 
     opacity: 1, 
     x: 0,
-    transition: { duration: 0.8, ease: "power2.out" }
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
   }
 };
 
@@ -24,7 +24,7 @@ export const slideFromLeftVariants = {
   visible: { 
     opacity: 1, 
     x: 0,
-    transition: { duration: 0.8, ease: "power2.out" }
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
   }
 };
 
@@ -33,7 +33,7 @@ export const slideFromTopVariants = {
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.8, ease: "power2.out" }
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
   }
 };
 
@@ -64,7 +64,7 @@ export const textSlideVariants = {
   visible: { 
     opacity: 1, 
     x: 0,
-    transition: { duration: 0.8, ease: "power2.out" }
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }
   }
 };
 

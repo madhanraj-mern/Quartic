@@ -7,10 +7,20 @@ import mvdaIcon from '../assets/images/home/solutions/icons/batch-optimisation.s
 import pdOptimizerIcon from '../assets/images/home/solutions/icons/quality-by-design.svg';
 import automatedPatIcon from '../assets/images/home/solutions/icons/energy-utility-optimization.svg';
 
-const SolutionsShowcaseSection = () => {
+const SolutionsShowcaseSection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
-  const solutions = [
+  // Use Strapi data with fallbacks
+  const solutionsData = data || homepage?.solutionsShowcase || {};
+  const title = solutionsData.title || 'Solutions';
+  const subtitle = solutionsData.subtitle || 'Comprehensive Manufacturing Solutions';
+  const description = solutionsData.description || 'Transform your manufacturing operations with our suite of intelligent solutions.';
+  
+  // Debug logging
+  console.log('SolutionsShowcaseSection - homepage:', homepage);
+  console.log('SolutionsShowcaseSection - solutionsData:', solutionsData);
+
+  const solutions = solutionsData.solutions || [
     {
       id: 'process-optimizer',
       icon: processOptimizerIcon,

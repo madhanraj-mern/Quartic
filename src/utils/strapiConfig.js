@@ -1,6 +1,6 @@
 // Strapi Configuration and API utilities
 export const STRAPI_CONFIG = {
-  baseURL: import.meta.env.VITE_STRAPI_URL || 'https://cancerfax.unifiedinfotechonline.com',
+  baseURL: import.meta.env.VITE_STRAPI_URL || null,
   timeout: 10000,
   retries: 2,
   retryDelay: 1000
@@ -137,6 +137,10 @@ export class StrapiAPI {
   }
 
   async request(endpoint, options = {}) {
+    if (!this.baseURL) {
+      throw new Error('Strapi baseURL not configured');
+    }
+    
     const url = `${this.baseURL}${endpoint}`;
     const config = {
       timeout: this.timeout,

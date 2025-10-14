@@ -1,0 +1,1179 @@
+/* ===========================================
+   CONSOLIDATED MOBILE RESPONSIVE STYLES
+   =========================================== */
+
+/* ===========================================
+   GLOBAL MOBILE OPTIMIZATIONS
+   =========================================== */
+
+/* Ensure proper viewport handling */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Touch-friendly interactions */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input, textarea {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* ===========================================
+   MOBILE-FIRST CONTAINER SYSTEM
+   =========================================== */
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 576px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* ===========================================
+   MOBILE TYPOGRAPHY
+   =========================================== */
+
+/* Mobile-first typography scaling */
+h1, .h1 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+h2, .h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+h3, .h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+h4, .h4 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+h5, .h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h6, .h6 {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+p, .p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Tablet typography */
+@media (min-width: 768px) {
+  h1, .h1 { font-size: 2.25rem; }
+  h2, .h2 { font-size: 2rem; }
+  h3, .h3 { font-size: 1.5rem; }
+  h4, .h4 { font-size: 1.25rem; }
+  h5, .h5 { font-size: 1.125rem; }
+  h6, .h6 { font-size: 1rem; }
+}
+
+/* Desktop typography */
+@media (min-width: 1200px) {
+  h1, .h1 { font-size: 3rem; }
+  h2, .h2 { font-size: 2.5rem; }
+  h3, .h3 { font-size: 1.75rem; }
+  h4, .h4 { font-size: 1.5rem; }
+  h5, .h5 { font-size: 1.25rem; }
+  h6, .h6 { font-size: 1.125rem; }
+}
+
+/* ===========================================
+   MOBILE LAYOUT IMPROVEMENTS
+   =========================================== */
+
+/* Mobile grid system */
+@media (max-width: 767px) {
+  .row {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  
+  .col,
+  [class*="col-"] {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  /* Stack columns on mobile */
+  .col-md-6,
+  .col-lg-4,
+  .col-lg-6,
+  .col-lg-8 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ===========================================
+   MOBILE NAVIGATION IMPROVEMENTS
+   =========================================== */
+
+/* Hamburger Menu Button */
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+
+.hamburger {
+  width: 25px;
+  height: 20px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 8px;
+  transform: rotate(135deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 8px;
+  transform: rotate(-135deg);
+}
+
+@media (max-width: 1199px) {
+  /* Hide desktop navigation on mobile/tablet */
+  .main-nav,
+  .main-nav ul,
+  .main-nav li,
+  .main-nav a {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Show mobile menu toggle */
+  .mobile-menu-toggle {
+    display: block !important;
+  }
+  
+  /* Hide desktop header right section */
+  .header-right {
+    display: none !important;
+  }
+  
+  /* Ensure mobile navigation is available */
+  .wraper-mobile-header {
+    display: block !important;
+  }
+  
+  .mobile-nav-overlay {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Hide mobile navigation on desktop */
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+  
+  .wraper-mobile-header {
+    display: none !important;
+  }
+  
+  .mobile-nav-overlay {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Hide desktop navigation */
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  /* Show mobile navigation */
+  .mobile-nav {
+    display: block !important;
+  }
+  
+  /* Mobile header adjustments */
+  .header {
+    padding: 1rem 0;
+  }
+  
+  .header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header .logo {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Hide mobile navigation on desktop */
+  .mobile-nav,
+  .wraper-mobile-header,
+  .mobile-nav-overlay {
+    display: none !important;
+  }
+  
+  /* Show desktop navigation */
+  .desktop-nav,
+  .main-nav {
+    display: flex !important;
+  }
+}
+
+/* Mobile navigation */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  transition: left 0.3s ease;
+}
+
+.mobile-nav.active {
+  left: 0;
+}
+
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Navigation Overlay */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .mobile-nav-overlay {
+    display: block;
+  }
+}
+
+.mobile-nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Header Navigation */
+.wraper-mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 1002;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .wraper-mobile-header {
+    display: block;
+  }
+}
+
+.wraper-mobile-header.open-mMenu {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile Header Top */
+.mobile-header-top {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.mobile-header-brand-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mobile-header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-header-logo img {
+  height: 32px;
+  width: auto;
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #333;
+  font-weight: 300;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-menu-close:hover {
+  background-color: #f5f5f5;
+}
+
+.mobile-menu-close span {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* Mobile Navigation Menu */
+.mobile-header-menu {
+  flex: 1;
+  padding: 0;
+  background: #ffffff;
+}
+
+.mobile-nav-menu {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.mobile-nav-item {
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  width: 100%;
+  min-height: 60px;
+  transition: all 0.2s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.mobile-nav-link:hover {
+  background-color: #f8f9fa;
+  color: #ff6a00;
+}
+
+.mobile-nav-link:focus {
+  outline: 2px solid #ff6a00;
+  outline-offset: 2px;
+}
+
+.mobile-nav-link:active {
+  background-color: #e9ecef;
+  transform: scale(0.98);
+}
+
+.nav-text {
+  flex: 1;
+  text-align: left;
+}
+
+.nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #ff6a00;
+  margin-left: 12px;
+}
+
+.nav-arrow svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* ===========================================
+   MOBILE BUTTON IMPROVEMENTS
+   =========================================== */
+
+/* Touch-friendly buttons */
+@media (max-width: 768px) {
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  [role="button"],
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Larger tap targets for navigation */
+  .nav-link,
+  .menu-item a {
+    padding: 12px 16px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Enhanced button styles for mobile */
+  .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn:active {
+    transform: translateY(0);
+  }
+}
+
+/* ===========================================
+   RESPONSIVE IMAGE OPTIMIZATIONS
+   =========================================== */
+
+/* Responsive image containers */
+.responsive-image,
+.mobile-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Mobile-optimized image sizing */
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hero-image,
+  .section-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* ===========================================
+   MOBILE PERFORMANCE OPTIMIZATIONS
+   =========================================== */
+
+/* Enhanced mobile animations and interactions */
+@media (max-width: 768px) {
+  /* Optimize animations for mobile performance */
+  * {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.3s !important;
+  }
+  
+  /* Enhanced hover effects for touch devices */
+  .hover-effect:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  /* Enhanced shadows for mobile */
+  .card,
+  .btn,
+  .form-control {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover,
+  .btn:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Simplify gradients */
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  /* Reduce blur effects */
+  .blur-effect {
+    filter: none !important;
+  }
+}
+
+/* ===========================================
+   IWS SECTION MOBILE RESPONSIVE
+   =========================================== */
+
+/* Mobile IWS Section Layout */
+@media (max-width: 768px) {
+  .home_iws_sec {
+    padding: 2rem 0;
+  }
+  
+  .home_iws_sec > .container {
+    padding: 0 1rem;
+  }
+  
+  /* Mobile Section Title */
+  .home_iws_sec .sec_heading_holder {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .home_iws_sec .h3_heading_text {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+  
+  .home_iws_sec .sec_heading_holder p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Mobile Main Content Layout */
+  .home_iws_sec .row {
+    flex-direction: column;
+  }
+  
+  .home_iws_sec .col-lg-6 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  /* Mobile Image Viewer */
+  .home_iws_sec .main-slide-image {
+    height: 300px;
+    min-height: 300px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio {
+    min-height: 300px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio img {
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  /* Mobile Content Card */
+  .home_iws_sec .industry_tab_item .tab_content {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: none;
+    animation: none;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_content .tab_title_popup {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_content .tab_description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_content .tab_actions .btn {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 16px;
+    min-height: 48px;
+  }
+  
+  /* Mobile Navigation Tabs */
+  .home_iws_sec .iws_tab_nav_wrap {
+    position: static;
+    margin-top: 1.5rem;
+    padding: 0;
+  }
+  
+  .home_iws_sec .iws_tab_nav_holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  .home_iws_sec .industry_tab_item {
+    flex: 1;
+    min-width: calc(50% - 0.25rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_title {
+    padding: 14px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 6px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition: all 0.2s ease;
+  }
+  
+  /* Mobile Statistics */
+  .home_iws_sec .iws_stats_wrap {
+    margin-bottom: 2rem;
+  }
+  
+  .home_iws_sec .iws_stats_wrap .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .home_iws_sec .iws_stats_wrap .col-md-3 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .home_iws_sec .iws_stats_wrap .stat_item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .home_iws_sec .iws_stats_wrap .stat_value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ff6a00;
+    margin-bottom: 0.5rem;
+  }
+  
+  .home_iws_sec .iws_stats_wrap .stat_label {
+    font-size: 0.875rem;
+    color: #6c757d;
+    line-height: 1.4;
+  }
+}
+
+/* Tablet IWS Section */
+@media (min-width: 769px) and (max-width: 991px) {
+  .home_iws_sec {
+    padding: 3rem 0;
+  }
+  
+  .home_iws_sec .main-slide-image {
+    height: 400px;
+    min-height: 400px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio {
+    min-height: 400px;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_content {
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    max-width: 280px;
+  }
+  
+  .home_iws_sec .iws_tab_nav_wrap {
+    bottom: 20px;
+  }
+}
+
+/* Small Mobile IWS Section */
+@media (max-width: 480px) {
+  .home_iws_sec {
+    padding: 1.5rem 0;
+  }
+  
+  .home_iws_sec > .container {
+    padding: 0 0.75rem;
+  }
+  
+  .home_iws_sec .main-slide-image {
+    height: 250px;
+    min-height: 250px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio {
+    min-height: 250px;
+  }
+  
+  .home_iws_sec .h3_heading_text {
+    font-size: 1.25rem;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_title {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_content {
+    padding: 1rem;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_content .tab_title_popup {
+    font-size: 1.125rem;
+  }
+  
+  .home_iws_sec .iws_stats_wrap .stat_value {
+    font-size: 1.75rem;
+  }
+}
+
+/* ===========================================
+   CUSTOMER PROOFS SECTION MOBILE RESPONSIVE
+   =========================================== */
+
+/* Mobile Customer Proofs Layout */
+@media (max-width: 768px) {
+  .testimonial_section {
+    padding: 2rem 0;
+  }
+  
+  .testimonial_section > .container {
+    padding: 0 1rem;
+  }
+  
+  /* Mobile Section Title */
+  .testimonial_section .section_title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Mobile 3-Panel Layout - Stack Vertically */
+  .testimonial_section .row {
+    flex-direction: column;
+  }
+  
+  .testimonial_section .col-lg-4,
+  .testimonial_section .col-lg-6,
+  .testimonial_section .col-lg-8 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  /* Mobile Image Viewer */
+  .testimonial_image_holder {
+    height: 250px;
+    min-height: 250px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .testimonial_image_holder .ratio {
+    min-height: 250px;
+  }
+  
+  .testimonial_image_holder .ratio img {
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* Mobile Testimonial Content */
+  .testimonial_block {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial_content {
+    text-align: center;
+  }
+  
+  .testimonial_content .testimonial_quote {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial_content .testimonial_author {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonial_content .testimonial_company {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  /* Mobile Navigation */
+  .testimonial_navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .testimonial_nav_btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid #ff6a00;
+    background: transparent;
+    color: #ff6a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  .testimonial_nav_btn:hover,
+  .testimonial_nav_btn:focus {
+    background: #ff6a00;
+    color: white;
+    outline: 2px solid #ff6a00;
+    outline-offset: 2px;
+  }
+  
+  .testimonial_nav_btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Mobile Stats */
+  .testimonial_stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .testimonial_stat_item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .testimonial_stat_value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff6a00;
+    margin-bottom: 0.25rem;
+  }
+  
+  .testimonial_stat_label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    line-height: 1.4;
+  }
+}
+
+/* Tablet Customer Proofs */
+@media (min-width: 769px) and (max-width: 991px) {
+  .testimonial_section {
+    padding: 3rem 0;
+  }
+  
+  .testimonial_image_holder {
+    height: 350px;
+    min-height: 350px;
+  }
+  
+  .testimonial_image_holder .ratio {
+    min-height: 350px;
+  }
+  
+  .testimonial_block {
+    padding: 2rem;
+  }
+}
+
+/* Small Mobile Customer Proofs */
+@media (max-width: 480px) {
+  .testimonial_section {
+    padding: 1.5rem 0;
+  }
+  
+  .testimonial_section > .container {
+    padding: 0 0.75rem;
+  }
+  
+  .testimonial_image_holder {
+    height: 200px;
+    min-height: 200px;
+  }
+  
+  .testimonial_image_holder .ratio {
+    min-height: 200px;
+  }
+  
+  .testimonial_block {
+    padding: 1rem;
+  }
+  
+  .testimonial_content .testimonial_quote {
+    font-size: 1rem;
+  }
+  
+  .testimonial_stats {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .testimonial_stat_item {
+    padding: 0.75rem;
+  }
+  
+  .testimonial_stat_value {
+    font-size: 1.25rem;
+  }
+}
+
+/* ===========================================
+   MOBILE UTILITY CLASSES
+   =========================================== */
+
+/* Mobile-only utilities */
+@media (max-width: 767px) {
+  .mobile-hidden { display: none !important; }
+  .mobile-visible { display: block !important; }
+  .mobile-text-center { text-align: center !important; }
+  .mobile-text-left { text-align: left !important; }
+  .mobile-text-right { text-align: right !important; }
+  .mobile-mb-0 { margin-bottom: 0 !important; }
+  .mobile-mb-1 { margin-bottom: 0.5rem !important; }
+  .mobile-mb-2 { margin-bottom: 1rem !important; }
+  .mobile-mb-3 { margin-bottom: 1.5rem !important; }
+  .mobile-mb-4 { margin-bottom: 2rem !important; }
+  .mobile-p-0 { padding: 0 !important; }
+  .mobile-p-1 { padding: 0.5rem !important; }
+  .mobile-p-2 { padding: 1rem !important; }
+  .mobile-p-3 { padding: 1.5rem !important; }
+  .mobile-p-4 { padding: 2rem !important; }
+}
+
+/* Desktop-only utilities */
+@media (min-width: 768px) {
+  .desktop-hidden { display: none !important; }
+  .desktop-visible { display: block !important; }
+}
+
+/* ===========================================
+   MOBILE ACCESSIBILITY
+   =========================================== */
+
+/* Improve accessibility on mobile */
+@media (max-width: 768px) {
+  .home_iws_sec .industry_tab_item .tab_title:focus,
+  .home_iws_sec .industry_tab_item .tab_content .tab_actions .btn:focus,
+  .testimonial_nav_btn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+  
+  .testimonial_content {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ===========================================
+   MOBILE GRID SYSTEM
+   =========================================== */
+
+.mobile-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .mobile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .mobile-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

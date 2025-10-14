@@ -2,18 +2,20 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import useParallax from '../hooks/useParallax';
 import useHoverEffects from '../hooks/useHoverEffects';
+import useMobileDetection from '../hooks/useMobileDetection';
 import GridContainer from './GridContainer';
 import heroImg1 from '../assets/images/home/hero-banner-img1.jpg';
 import heroImg2 from '../assets/images/home/home_banner_img2.jpg';
 import heroImg3 from '../assets/images/home/home_banner_img3.jpg';
 import heroImg4 from '../assets/images/home/home_banner_img4.jpg';
 
-const HeroSection = ({ homepage }) => {
+const HeroSection = ({ homepage, data }) => {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, -150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0.8]);
   const { ref: parallaxRef, y: parallaxY } = useParallax(0.5, 0);
   const { hoverVariants, floatVariants } = useHoverEffects();
+  const { isMobile, isTablet } = useMobileDetection();
   
   // Helper function to get full image URL from Strapi
   const getImageUrl = (url) => {
@@ -24,15 +26,15 @@ const HeroSection = ({ homepage }) => {
     return url;
   };
 
-  // Get content from Strapi or use defaults
-  const heroData = homepage?.heroSection || {};
+  // Get content from section data or homepage fallback
+  const heroData = data || homepage?.heroSection || {};
   
   // Use local images for now
   const imageList = [heroImg1, heroImg2, heroImg3, heroImg4];
 
   // Get content from Strapi or use defaults
   const title = heroData.title || 'Decision Intelligence for Manufacturing Operations Management';
-  const description = heroData.subtitle || 'Deliver responsive, agile operations with smart manufacturing solutions powered by AI and DataOps for real-time context.';
+  const description = heroData.subtitle || heroData.description || 'Deliver responsive, agile operations with smart manufacturing solutions powered by AI and DataOps for real-time context.';
   const primaryCtaText = heroData.primaryCtaText || 'Request a Demo';
   const primaryCtaUrl = heroData.primaryCtaUrl || 'https://www.quartic.ai/demo/';
   const secondaryCtaText = heroData.secondaryCtaText || 'Watch Video';

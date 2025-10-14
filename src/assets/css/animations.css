@@ -152,6 +152,26 @@
   transform: translateX(0);
 }
 
+.word-space {
+  display: inline !important;
+  opacity: 1 !important;
+  transform: none !important;
+  white-space: pre !important;
+}
+
+/* Fix text spacing issues in animated text */
+.split_text {
+  white-space: normal !important;
+}
+
+.split_text .word {
+  white-space: normal !important;
+}
+
+.split_text .word-space {
+  white-space: pre !important;
+}
+
 /* Scroll Reveal Animations */
 .reveal {
   opacity: 0;

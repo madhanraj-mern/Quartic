@@ -93,7 +93,7 @@ const Footer = () => {
               <div className="col-12 col-md-12 col-lg-9">
                 <div className="footer-main-menu-content match__height__sec">
                   <div className="row gx-0">
-                    <div className="col-12 col-lg-6 footer_middle_col px-0 d-none d-lg-block">
+                    <div className="col-12 col-lg-6 footer_middle_col px-0">
                       <div className="footer_middle_top_block" data-match-height>
                         <div className="row">
                           {menus.map((menu, menuIndex) => (
@@ -155,7 +155,7 @@ const Footer = () => {
                     </div>
 
                     <div className="col-12 col-lg-6 footer_right_col px-0">
-                      <div className="footer_right_top_block d-none d-lg-block" data-match-height>
+                      <div className="footer_right_top_block" data-match-height>
                         <div className="row">
                           <div className="col-12 col-md-12">
                             <div className="footer-content-block vertical-menu-block">

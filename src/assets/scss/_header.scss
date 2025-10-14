@@ -2,7 +2,7 @@
 /* START OF HEADER */
 /* ====================== */
 
-.bannerCtaSection {
+.wraper-header-top {
   //background: linear-gradient(90deg, #000000 79.81%, #f15a29 100%);
   padding: 7px 0;
   background-size: 100% 100%;
@@ -166,7 +166,7 @@
     background-color: $color__white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     top: 0;
-    .bannerCtaSection {
+    .wraper-header-top {
       //margin-bottom: -44px;
       height: 0;
       visibility: hidden;

@@ -1,0 +1,1371 @@
+/* IWS Section - Complete Styles from quartic-html */
+
+/* Main Section Container - Match Original Quartic */
+.home_iws_sec {
+  width: 100%;
+  padding: 20px 0 0 0; /* Further reduced top padding to minimize spacing */
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Background Pattern */
+.home_iws_sec::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(64, 176, 224, 0.02) 0%, rgba(255, 102, 0, 0.02) 100%);
+  z-index: 1;
+}
+
+.home_iws_sec > * {
+  position: relative;
+  z-index: 2;
+}
+
+.home_iws_sec > .container {
+  position: relative;
+  padding-top: 0px; /* Eliminated to minimize spacing */
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec > .container {
+    padding-top: 5px; /* Further reduced to minimize spacing */
+  }
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec > .container {
+    padding-top: 10px; /* Further reduced to minimize spacing */
+  }
+}
+
+/* Divider Line */
+.home_iws_sec .divider_line {
+  position: absolute;
+  left: 36%;
+  top: 0;
+  z-index: 3;
+  width: 1px;
+  height: 100%;
+  background-color: #e0e0e0;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .divider_line {
+    left: 23.8%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .divider_line {
+    left: 23.65%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .home_iws_sec .divider_line {
+    left: 23.5%;
+  }
+}
+
+/* Left Column */
+.home_iws_sec .osfc_left_col {
+  padding-bottom: 0px; /* Eliminated to minimize bottom space */
+  padding-left: calc(36% + 15px);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .osfc_left_col {
+    width: 100%;
+    padding-left: calc(23% + 15px);
+    padding-bottom: 0px; /* Eliminated to minimize bottom space */
+  }
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .osfc_left_col {
+    width: 23%;
+    padding-left: 0;
+  }
+}
+
+/* Right Column */
+.home_iws_sec .osfc_right_col {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .osfc_right_col {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .osfc_right_col {
+    width: 77%;
+  }
+}
+
+/* Section Heading */
+.home_iws_sec .sec_heading_wrap {
+  margin-bottom: 0;
+}
+
+.home_iws_sec .sec_heading_holder .tag_lightBlue {
+  background-color: #40B0E0;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.home_iws_sec .sec_heading_holder .h3_heading_text {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .sec_heading_holder .h3_heading_text {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .sec_heading_holder .h3_heading_text {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .home_iws_sec .sec_heading_holder .h3_heading_text {
+    font-size: 44px;
+  }
+}
+
+.home_iws_sec .heading_text {
+  margin-top: 12px;
+}
+
+.home_iws_sec .heading_text p {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666666;
+  margin-bottom: 0;
+}
+
+/* Counter Content */
+.home_iws_sec .left_counter_content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 1400px) {
+  .home_iws_sec .left_counter_content {
+    margin-top: 35px;
+    gap: 30px;
+  }
+}
+
+.home_iws_sec .counter-content-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.home_iws_sec .counter-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.home_iws_sec .counter-number {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.home_iws_sec .counter-number .counter {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #FF6600;
+  line-height: 1;
+  margin-right: 4px;
+}
+
+.home_iws_sec .counter-number span {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #FF6600;
+  line-height: 1;
+}
+
+.home_iws_sec .counter-infoText p {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Slider Holder */
+.home_iws_sec .iws_slider_holder {
+  position: relative;
+  z-index: 3;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .iws_slider_holder {
+    padding-bottom: 0px; /* Eliminated to eliminate bottom space */
+  }
+}
+
+/* Main Slider */
+.home_iws_sec .iws-slider-main {
+  position: relative;
+}
+
+.home_iws_sec .main-slide-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 550px; /* Increased for better visibility and comfort */
+  width: 100%;
+  min-height: 450px;
+}
+
+.home_iws_sec .main-slide-image:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
+
+.home_iws_sec .main-slide-image .ratio {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 550px; /* Match container height */
+}
+
+.home_iws_sec .main-slide-image .ratio::before {
+  content: "";
+  display: block;
+  padding-top: 0; /* Remove padding to use full height */
+}
+
+.home_iws_sec .main-slide-image .ratio img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important; /* Changed to contain to show full image */
+  object-position: center !important;
+  transform: scale(1) !important;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+  animation: imageFadeIn 0.8s ease-out forwards;
+}
+
+/* Updated element styles - replacing absolute positioning with relative */
+.element-updated {
+  font-size: 16px;
+  font-family: "Red Hat Text", sans-serif;
+  color: rgb(56, 62, 69);
+  line-height: 24px;
+  text-decoration: rgb(56, 62, 69);
+  width: 930.156px;
+  height: 504.115px;
+  border: 0px none rgb(56, 62, 69);
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border-spacing: 0px;
+  transition: all;
+  outline: rgb(56, 62, 69) none 0px;
+  box-sizing: border-box;
+}
+
+/* Image fade-in animation */
+@keyframes imageFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.home_iws_sec .iws-slider-main .splide__slide.is-active {
+  z-index: 1;
+  box-shadow: 0px -10px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.home_iws_sec .iws-slider-main .splide__slide.is-active .main-slide-image .ratio img {
+  transform: scale(1);
+}
+
+/* Thumbnail Slider */
+.home_iws_sec .iws-thumb-slider {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .iws-thumb-slider {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+  }
+}
+
+.home_iws_sec .iws-thumb-slider .splide__track {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .iws-thumb-slider .splide__track {
+    padding-left: 20px !important;
+    padding-top: 20px !important;
+  }
+}
+
+.home_iws_sec .iws-thumb-slider .splide__list {
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (max-width: 767px) {
+  .home_iws_sec .iws-thumb-slider .splide__list {
+    flex-direction: column;
+  }
+}
+
+.home_iws_sec .iws-thumb-slider .splide__slide {
+  transition: all 0.3s ease-in-out;
+  height: 72px;
+  border: none;
+  box-shadow: 0px -16px 20px 0px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .iws-thumb-slider .splide__slide {
+    height: 132px;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.home_iws_sec .iws-thumb-slider .slide-info {
+  background: #fff;
+  padding: 32px 24px;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .iws-thumb-slider .slide-info {
+    padding: 15px;
+    border-right: 1px solid #40B0E0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .iws-thumb-slider .slide-info {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home_iws_sec .iws-thumb-slider .slide-info {
+    background-image: url(../images/icons/arrow_down_black.svg);
+    background-repeat: no-repeat;
+    background-size: 12px 8px;
+    background-position: right 22px top 33px;
+  }
+}
+
+.home_iws_sec .iws-thumb-slider .slide-info .title_text {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .iws-thumb-slider .slide-info .title_text {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 992px) {
+  .home_iws_sec .iws-thumb-slider .slide-info .title_text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .iws-thumb-slider .slide-info .title_text {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .home_iws_sec .iws-thumb-slider .slide-info .title_text {
+    font-size: 22px;
+  }
+}
+
+.home_iws_sec .iws-thumb-slider .slide-info .active_show_content {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: transform 0.4s 0.3s linear, opacity 0.4s 0.3s linear,
+    visibility 0.1s 0.3s linear;
+}
+
+.home_iws_sec .iws-thumb-slider .slide-info .active_show_content p {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .iws-thumb-slider .slide-info .active_show_content p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .home_iws_sec .iws-thumb-slider .slide-info .active_show_content p {
+    font-size: 22px;
+  }
+}
+
+.home_iws_sec .iws-thumb-slider .slide-info .active_show_content .btn_holder {
+  margin-top: 0;
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .iws-thumb-slider .slide-info .active_show_content .btn_holder {
+    margin-top: 25px;
+  }
+}
+
+.home_iws_sec .iws-thumb-slider .slide-info .active_show_content .btn {
+  padding: 7px 18px;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #FF6600;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.home_iws_sec .iws-thumb-slider .slide-info .active_show_content .btn:hover {
+  background-color: #E55A00;
+  transform: translateY(-1px);
+}
+
+@media (min-width: 1800px) {
+  .home_iws_sec .iws-thumb-slider .slide-info .active_show_content .btn {
+    padding: 12px 22px;
+  }
+}
+
+/* Active Slide */
+.home_iws_sec .iws-thumb-slider .splide__slide.is-active {
+  height: 150px;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .iws-thumb-slider .splide__slide.is-active {
+    height: 190px;
+    box-shadow: 0px -10px 16px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .iws-thumb-slider .splide__slide.is-active {
+    z-index: 1;
+    height: 255px;
+  }
+}
+
+.home_iws_sec .iws-thumb-slider .splide__slide.is-active .slide-info {
+  border-right: 1px solid transparent;
+}
+
+.home_iws_sec .iws-thumb-slider .splide__slide.is-active .slide-info .active_show_content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+  .home_iws_sec .iws-thumb-slider .splide__slide.is-active .slide-info {
+    background-image: url(../images/icons/arrow_up_black.svg);
+  }
+}
+
+/* Splide Overrides */
+.home_iws_sec .splide__pagination {
+  display: none;
+}
+
+.home_iws_sec .splide__arrows {
+  display: none;
+}
+
+/* Splide Base Styles */
+.home_iws_sec .splide {
+  position: relative;
+}
+
+.home_iws_sec .splide__track {
+  overflow: hidden;
+}
+
+.home_iws_sec .splide__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home_iws_sec .splide__slide {
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Industry Tabs Navigation - Positioned at bottom of container */
+.home_iws_sec .iws_tab_nav_wrap {
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  padding: 0px 0 0 0 !important; /* Eliminated padding to eliminate bottom space */
+  z-index: 10 !important;
+  min-height: 20px !important; /* Minimal height to eliminate bottom space */
+  transform: translateY(0) !important; /* Ensure it's at the very bottom */
+  margin: 0 !important;
+  top: auto !important;
+}
+
+/* Ensure the main image container has relative positioning for absolute children */
+.home_iws_sec .main-slide-image {
+  position: relative !important;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  display: block !important;
+}
+
+.home_iws_sec .iws_tab_nav_holder {
+  background-color: transparent;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 0 !important;
+  position: relative !important;
+  bottom: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+/* Industry Tab Items - Only show titles initially */
+.home_iws_sec .industry_tab_item {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.home_iws_sec .industry_tab_item .tab_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666666;
+  margin-bottom: 0;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.home_iws_sec .industry_tab_item:hover .tab_title {
+  color: #000000;
+}
+
+.home_iws_sec .industry_tab_item.active .tab_title {
+  color: #000000;
+  font-weight: 600;
+  border-bottom-color: #FF6600;
+}
+
+/* Popup Card - Positioned at bottom of container */
+.home_iws_sec .industry_tab_item .tab_content {
+  position: absolute;
+  bottom: 20px; /* Positioned within the image viewer, not at absolute bottom */
+  right: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  min-width: 280px;
+  max-width: 320px;
+  z-index: 20;
+  overflow: hidden;
+  left: auto;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transform-origin: bottom right;
+  
+  /* Start completely hidden */
+  display: none;
+  opacity: 0;
+  transform: scale(0.9) translateY(15px);
+  transition: all 0.3s ease-out;
+  pointer-events: none;
+}
+
+/* Active state - Force visibility */
+.home_iws_sec .industry_tab_item .tab_content.active,
+.home_iws_sec .industry_tab_item.active .tab_content {
+  display: block !important;
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+  pointer-events: auto !important;
+  z-index: 100 !important;
+}
+
+/* Additional fallback for active state */
+.home_iws_sec .industry_tab_item[data-active="true"] .tab_content {
+  display: block !important;
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+/* Nuclear option - Force visibility with highest specificity */
+.home_iws_sec .industry_tab_item.active .tab_content.active {
+  display: block !important;
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+  pointer-events: auto !important;
+  position: absolute !important;
+  z-index: 999 !important;
+  background-color: #ffffff !important;
+}
+
+/* Ensure content inside popup is visible */
+.home_iws_sec .industry_tab_item .tab_content.active *,
+.home_iws_sec .industry_tab_item.active .tab_content * {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Ensure popup content elements are properly displayed */
+.home_iws_sec .industry_tab_item .tab_content .tab_title_popup,
+.home_iws_sec .industry_tab_item .tab_content .tab_description,
+.home_iws_sec .industry_tab_item .tab_content .tab_actions {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Additional fallback for active popup cards */
+.home_iws_sec .industry_tab_item .tab_content.active {
+  display: block !important;
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+  pointer-events: auto !important;
+  z-index: 100 !important;
+  visibility: visible !important;
+}
+
+/* Ensure popup content is visible when active */
+.home_iws_sec .industry_tab_item .tab_content.active * {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Override AOS animations for popup cards */
+.home_iws_sec .industry_tab_item .tab_content {
+  animation: none !important;
+  transform: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.home_iws_sec .industry_tab_item .tab_content.active {
+  animation: none !important;
+  transform: scale(1) translateY(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Force popup cards to be visible regardless of AOS */
+.home_iws_sec .industry_tab_item.active .tab_content {
+  animation: none !important;
+  transform: scale(1) translateY(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  pointer-events: auto !important;
+  z-index: 100 !important;
+}
+
+/* Force visibility for active popup - highest priority */
+.home_iws_sec .industry_tab_item.active .tab_content {
+  display: block !important;
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 100 !important;
+  animation: none !important;
+}
+
+/* Completely disable AOS for popup cards */
+.home_iws_sec .industry_tab_item .tab_content {
+  animation: none !important;
+  transition: all 0.3s ease-out !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: scale(0.9) translateY(15px) !important;
+}
+
+.home_iws_sec .industry_tab_item .tab_content.active {
+  animation: none !important;
+  transform: scale(1) translateY(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  pointer-events: auto !important;
+  z-index: 100 !important;
+}
+
+/* Override AOS completely for tab items */
+.home_iws_sec .industry_tab_item[data-aos-disable="true"] .tab_content {
+  animation: none !important;
+  transform: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.home_iws_sec .industry_tab_item[data-aos-disable="true"] .tab_content.active {
+  animation: none !important;
+  transform: scale(1) translateY(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  pointer-events: auto !important;
+  z-index: 100 !important;
+}
+
+/* Force disable AOS animations globally for popup cards */
+.home_iws_sec .tab_content {
+  animation: none !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.home_iws_sec .tab_content.active {
+  animation: none !important;
+  transition: all 0.3s ease-out !important;
+}
+
+/* Completely disable AOS for the entire IWS section */
+.home_iws_sec .industry_tab_item .tab_content,
+.home_iws_sec .industry_tab_item .tab_content * {
+  animation: none !important;
+  transition: all 0.3s ease-out !important;
+}
+
+/* Override AOS classes globally */
+.home_iws_sec .aos-init,
+.home_iws_sec .aos-animate {
+  animation: none !important;
+  transform: none !important;
+  opacity: inherit !important;
+  visibility: inherit !important;
+}
+
+/* Force popup cards to work independently of AOS */
+.home_iws_sec .industry_tab_item .tab_content {
+  position: absolute !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+  padding: 20px !important;
+  min-width: 280px !important;
+  max-width: 320px !important;
+  z-index: 20 !important;
+  overflow: hidden !important;
+  left: auto !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  transform-origin: bottom right !important;
+  animation: none !important;
+  transition: all 0.3s ease-out !important;
+  pointer-events: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  transform: scale(0.9) translateY(15px) !important;
+  visibility: hidden !important;
+}
+
+.home_iws_sec .industry_tab_item .tab_content.active {
+  display: block !important;
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+  pointer-events: auto !important;
+  z-index: 100 !important;
+  visibility: visible !important;
+  animation: none !important;
+  transition: all 0.3s ease-out !important;
+}
+
+/* Popup slide-in animation */
+@keyframes popupSlideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.95) translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.home_iws_sec .industry_tab_item .tab_title_popup {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #000000 !important;
+  margin-bottom: 8px !important;
+  line-height: 1.3 !important;
+  text-align: left !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.home_iws_sec .industry_tab_item .tab_description {
+  font-size: 15px !important;
+  color: #555555 !important;
+  margin-bottom: 16px !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.home_iws_sec .industry_tab_item .tab_actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 15px !important;
+  visibility: visible !important;
+}
+
+.home_iws_sec .industry_tab_item .tab_button {
+  background-color: #FF6600;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.home_iws_sec .industry_tab_item .tab_button:hover {
+  background-color: #E55A00;
+  transform: translateY(-1px);
+}
+
+.home_iws_sec .industry_tab_item .chat_icon {
+  width: 32px;
+  height: 32px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.home_iws_sec .industry_tab_item .chat_icon:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.1);
+}
+
+.home_iws_sec .industry_tab_item .chat_icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Image transition effects */
+.home_iws_sec .slide-image {
+  transition: all 0.6s ease-in-out;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Show full image */
+  object-position: center;
+}
+
+.home_iws_sec .main-slide-image:hover .slide-image {
+  transform: scale(1.02);
+}
+
+/* Tab shifting animation */
+.home_iws_sec .industry_tab_item {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.home_iws_sec .industry_tab_item:hover {
+  transform: translateY(-2px);
+}
+
+.home_iws_sec .industry_tab_item.active {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+  .home_iws_sec {
+    padding: 60px 0;
+  }
+  
+  .home_iws_sec .osfc_left_col,
+  .home_iws_sec .osfc_right_col {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .home_iws_sec .osfc_left_col {
+    margin-bottom: 10px; /* Further reduced to minimize bottom space */
+  }
+  
+  .home_iws_sec .iws_slider_holder {
+    padding-bottom: 0;
+  }
+  
+  .home_iws_sec .iws_tab_nav_wrap {
+    position: relative;
+    bottom: auto;
+    margin-top: 10px; /* Further reduced to minimize bottom space */
+  }
+  
+  .home_iws_sec .industry_tab_item.active .tab_content {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+    left: auto;
+    transform: none;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .home_iws_sec {
+    padding: 40px 0;
+  }
+  
+  .home_iws_sec .sec_heading_holder .h3_heading_text {
+    font-size: 20px;
+  }
+  
+  .home_iws_sec .main-slide-image {
+    height: 650px; /* Increased for better visibility and comfort */
+    min-height: 650px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio::before {
+    padding-top: 0;
+  }
+  
+  .home_iws_sec .iws_tab_nav_holder {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .home_iws_sec .industry_tab_item {
+    flex: 1;
+    min-width: calc(50% - 5px);
+  }
+  
+  .home_iws_sec .industry_tab_item.active .tab_content {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    left: 15px;
+    min-width: auto;
+    max-width: none;
+    padding: 15px;
+  }
+}
+
+/* Typography Fixes - Match Original Quartic Website */
+.home_iws_sec .sec_heading_holder .tag_lightBlue {
+  background-color: #E3F2FD !important; /* Light blue background for tag - match original */
+  color: #1976D2 !important; /* Blue text for tag - match original */
+  padding: 8px 20px !important;
+  border-radius: 20px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+  margin-bottom: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  font-family: 'Red Hat Text', sans-serif !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+}
+
+.home_iws_sec .sec_heading_holder .h3_heading_text {
+  font-size: 48px !important; /* Match original large heading */
+  font-weight: 700 !important;
+  color: #1A1A1A !important; /* Darker text for better contrast */
+  line-height: 1.1 !important;
+  margin-bottom: 12px !important;
+  font-family: 'Red Hat Text', sans-serif !important;
+  letter-spacing: -0.02em !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+}
+
+.home_iws_sec .heading_text p {
+  font-size: 18px !important;
+  color: #666666 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+  font-family: 'Red Hat Text', sans-serif !important;
+}
+
+/* Counter Animation Styling - Match Original */
+.home_iws_sec .counter-content-item {
+  margin-bottom: 16px !important;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid #F0F0F0 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  animation: counterSlideIn 0.6s ease-out forwards;
+}
+
+/* Counter slide-in animation */
+@keyframes counterSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.home_iws_sec .counter-content-item:hover {
+  transform: translateX(10px) !important;
+  border-bottom-color: #FF6600 !important;
+}
+
+.home_iws_sec .counter-number {
+  margin-bottom: 8px !important;
+}
+
+.home_iws_sec .counter-number .statvalue {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+  color: #FF6600 !important;
+  line-height: 1 !important;
+  font-family: 'Red Hat Text', sans-serif !important;
+  transition: all 0.3s ease !important;
+}
+
+.home_iws_sec .counter-number span:last-child {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+  color: #FF6600 !important;
+  line-height: 1 !important;
+  font-family: 'Red Hat Text', sans-serif !important;
+}
+
+.home_iws_sec .counter-infoText p {
+  font-size: 16px !important;
+  color: #333333 !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+  font-family: 'Red Hat Text', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+/* Tab Navigation Styling - Match Reference Image */
+.home_iws_sec .industry_tab_item .tab_title {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #333333 !important;
+  margin-bottom: 0 !important;
+  padding: 10px 16px !important;
+  transition: all 0.3s ease !important;
+  border-bottom: 2px solid transparent !important;
+  font-family: 'Red Hat Text', sans-serif !important;
+  text-align: center !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  margin: 0 3px !important;
+  min-width: 100px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.home_iws_sec .industry_tab_item:hover .tab_title {
+  color: #000000 !important;
+  transform: translateY(-2px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.home_iws_sec .industry_tab_item.active .tab_title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  background-color: #FF6600 !important;
+  border-color: #FF6600 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3) !important;
+}
+
+/* Popup Card Styling - Match Original */
+.home_iws_sec .industry_tab_item .tab_title_popup {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #000000 !important;
+  margin-bottom: 12px !important;
+  line-height: 1.2 !important;
+  text-align: left !important;
+  font-family: 'Red Hat Text', sans-serif !important;
+}
+
+.home_iws_sec .industry_tab_item .tab_description {
+  font-size: 16px !important;
+  color: #666666 !important;
+  margin-bottom: 10px !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
+  font-family: 'Red Hat Text', sans-serif !important;
+}
+
+.home_iws_sec .industry_tab_item .tab_button {
+  background-color: #FF6600 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  flex: 1 !important;
+  font-family: 'Red Hat Text', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.home_iws_sec .industry_tab_item .tab_button:hover {
+  background-color: #E55A00 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3) !important;
+}
+
+/* Enhanced Animations */
+.home_iws_sec .anim-item-left {
+  opacity: 1; /* Show by default, animate on scroll */
+  transform: translateX(0);
+  transition: all 0.8s ease-out;
+}
+
+.home_iws_sec .anim-item-left.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.home_iws_sec .anim-item-right {
+  opacity: 1; /* Show by default, animate on scroll */
+  transform: translateX(0);
+  transition: all 0.8s ease-out;
+}
+
+.home_iws_sec .anim-item-right.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.home_iws_sec .anim-item-zoomIn {
+  opacity: 1; /* Show by default, animate on scroll */
+  transform: scale(1);
+  transition: all 0.6s ease-out;
+}
+
+.home_iws_sec .anim-item-zoomIn.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Image Transition Effects - Override */
+.home_iws_sec .slide-image {
+  transition: all 0.6s ease-in-out !important;
+  transform: scale(1) !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important; /* Show full image */
+  object-position: center !important;
+  filter: brightness(1) !important;
+}
+
+.home_iws_sec .main-slide-image:hover .slide-image {
+  transform: scale(1.02) !important;
+  filter: brightness(1.05) !important;
+}
+
+/* Responsive Image Sizing */
+@media (max-width: 991px) {
+  .home_iws_sec .main-slide-image {
+    height: 500px; /* Increased for better visibility and comfort */
+    min-height: 500px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio {
+    min-height: 500px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio::before {
+    padding-top: 0;
+  }
+  
+      /* Adjust popup card position for tablet */
+      .home_iws_sec .industry_tab_item .tab_content {
+        bottom: 25px; /* Positioned within image viewer */
+        min-width: 250px;
+        max-width: 280px;
+      }
+}
+
+@media (max-width: 768px) {
+  .home_iws_sec .main-slide-image {
+    height: 450px; /* Increased for better visibility and comfort */
+    min-height: 450px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio {
+    min-height: 450px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio::before {
+    padding-top: 0;
+  }
+  
+      /* Adjust popup card position for mobile */
+      .home_iws_sec .industry_tab_item .tab_content {
+        bottom: 20px; /* Positioned within image viewer */
+        min-width: 220px;
+        max-width: 250px;
+        padding: 15px;
+      }
+}
+
+/* Responsive Typography */
+@media (max-width: 1200px) {
+  .home_iws_sec .sec_heading_holder .h3_heading_text {
+    font-size: 40px !important;
+  }
+  
+  .home_iws_sec .counter-number .statvalue {
+    font-size: 40px !important;
+  }
+  
+  .home_iws_sec .counter-number span:last-child {
+    font-size: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .home_iws_sec .sec_heading_holder .h3_heading_text {
+    font-size: 32px !important;
+  }
+  
+  .home_iws_sec .counter-number .statvalue {
+    font-size: 32px !important;
+  }
+  
+  .home_iws_sec .counter-number span:last-child {
+    font-size: 32px !important;
+  }
+  
+  .home_iws_sec .heading_text p {
+    font-size: 16px !important;
+  }
+}

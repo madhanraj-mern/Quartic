@@ -1,0 +1,83 @@
+/* Dynamic Sections CSS - Ensures proper styling for dynamically rendered sections */
+
+.section-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Ensure proper spacing between sections */
+.section-wrapper + .section-wrapper {
+  margin-top: 0; /* Let individual components handle their own spacing */
+}
+
+/* Debug styles for development */
+.section-wrapper[data-section-type] {
+  /* Add subtle border in development to see section boundaries */
+  /* border: 1px dashed rgba(255, 106, 0, 0.2); */
+}
+
+/* Ensure all dynamic sections inherit proper styling */
+.section-wrapper .hero-section,
+.section-wrapper .partners-section,
+.section-wrapper .how-it-works-section,
+.section-wrapper .our-process-section,
+.section-wrapper .iws-section,
+.section-wrapper .request-demo-section,
+.section-wrapper .applications-section,
+.section-wrapper .simple-applications-section,
+.section-wrapper .application-section,
+.section-wrapper .who-is-it-for-section,
+.section-wrapper .real-results-section,
+.section-wrapper .cta-schedule-demo-section,
+.section-wrapper .real-results-grid-section,
+.section-wrapper .customer-proofs-section,
+.section-wrapper .blog-latest-section,
+.section-wrapper .footer-section {
+  /* Ensure components maintain their original styling */
+  position: relative;
+  width: 100%;
+}
+
+/* Page-specific styling */
+.home-page .section-wrapper {
+  /* Homepage specific section styling */
+}
+
+.about-page .section-wrapper {
+  /* About page specific section styling */
+}
+
+/* Responsive adjustments for dynamic sections */
+@media (max-width: 768px) {
+  .section-wrapper {
+    /* Mobile adjustments for dynamic sections */
+  }
+}
+
+/* Animation support for dynamic sections */
+.section-wrapper {
+  /* Ensure smooth transitions when sections are added/removed */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Loading state for dynamic sections */
+.section-wrapper.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Error state for dynamic sections */
+.section-wrapper.error {
+  border: 2px solid #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.section-wrapper.error::before {
+  content: "⚠️ Section Error: ";
+  font-weight: bold;
+  color: #ff4444;
+}
+

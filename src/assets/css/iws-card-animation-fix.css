@@ -1,0 +1,399 @@
+/* IWS Section - Card Animation and Flexbox Fix */
+
+/* Main Section Container */
+.home_iws_sec {
+  width: 100%;
+  padding: 40px 0 20px 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Background Pattern */
+.home_iws_sec::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(64, 176, 224, 0.02) 0%, rgba(255, 102, 0, 0.02) 100%);
+  z-index: 1;
+}
+
+.home_iws_sec > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Container */
+.home_iws_sec > .container {
+  position: relative;
+  padding-top: 20px;
+}
+
+/* Divider Line */
+.home_iws_sec .divider_line {
+  position: absolute;
+  left: 36%;
+  top: 0;
+  z-index: 3;
+  width: 1px;
+  height: 100%;
+  background-color: #e0e0e0;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .divider_line {
+    left: 23.8%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .divider_line {
+    left: 23.65%;
+  }
+}
+
+/* Left Column - Flexbox Layout */
+.home_iws_sec .osfc_left_col {
+  padding-bottom: 20px;
+  padding-left: calc(36% + 15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .home_iws_sec .osfc_left_col {
+    width: 100%;
+    padding-left: calc(23% + 15px);
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .osfc_left_col {
+    width: 23%;
+    padding-left: 0;
+  }
+}
+
+/* Right Column - Flexbox Layout */
+.home_iws_sec .osfc_right_col {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@media (min-width: 1200px) {
+  .home_iws_sec .osfc_right_col {
+    width: 77%;
+    padding-left: 30px;
+  }
+}
+
+/* Main Image Container - Flexbox */
+.home_iws_sec .main-slide-image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+}
+
+.home_iws_sec .main-slide-image .ratio {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_iws_sec .main-slide-image .ratio::before {
+  content: '';
+  display: block;
+  padding-top: 0;
+}
+
+.home_iws_sec .main-slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  transition: all 0.6s ease-out;
+}
+
+/* Industry Tabs Navigation - Flexbox */
+.home_iws_sec .iws_tab_nav_wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+}
+
+.home_iws_sec .iws_tab_nav_holder {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Industry Tab Items */
+.home_iws_sec .industry_tab_item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  text-align: center;
+}
+
+.home_iws_sec .industry_tab_item:hover {
+  background-color: #f8f9fa;
+  border-color: #ff6a00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.2);
+}
+
+.home_iws_sec .industry_tab_item.active {
+  background-color: #ff6a00;
+  border-color: #ff6a00;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.3);
+}
+
+.home_iws_sec .industry_tab_item .tab_title {
+  font-size: 14px;
+  font-weight: 600;
+  color: inherit;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Popup Card - Clean Animation */
+.home_iws_sec .industry_tab_item .tab_content {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  min-width: 280px;
+  max-width: 320px;
+  z-index: 100;
+  overflow: hidden;
+  left: auto;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transform-origin: bottom right;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  display: none;
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  visibility: hidden;
+}
+
+/* Active Popup Card */
+.home_iws_sec .industry_tab_item .tab_content.active {
+  display: block !important;
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
+  animation: popupSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Popup Card Content */
+.home_iws_sec .industry_tab_item .tab_title_popup {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  display: block;
+}
+
+.home_iws_sec .industry_tab_item .tab_description {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  display: block;
+}
+
+.home_iws_sec .industry_tab_item .tab_actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home_iws_sec .industry_tab_item .tab_cta {
+  background-color: #ff6a00;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.home_iws_sec .industry_tab_item .tab_cta:hover {
+  background-color: #e55a00;
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes popupSlideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.95) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes imageFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes counterSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+  .home_iws_sec .osfc_left_col {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 30px;
+  }
+  
+  .home_iws_sec .osfc_right_col {
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  .home_iws_sec .divider_line {
+    display: none;
+  }
+  
+  .home_iws_sec .main-slide-image {
+    height: 450px;
+    min-height: 450px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio {
+    min-height: 450px;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_content {
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .home_iws_sec .main-slide-image {
+    height: 400px;
+    min-height: 400px;
+  }
+  
+  .home_iws_sec .main-slide-image .ratio {
+    min-height: 400px;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_content {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    padding: 15px;
+    min-width: auto;
+    max-width: none;
+  }
+  
+  .home_iws_sec .iws_tab_nav_wrap {
+    padding: 15px;
+  }
+  
+  .home_iws_sec .industry_tab_item {
+    padding: 10px 16px;
+    min-width: 100px;
+  }
+  
+  .home_iws_sec .industry_tab_item .tab_title {
+    font-size: 13px;
+  }
+}
+
+/* Disable AOS for popup cards */
+.home_iws_sec .industry_tab_item .tab_content {
+  animation: none !important;
+}
+
+.home_iws_sec .industry_tab_item .tab_content.active {
+  animation: popupSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+}
+
+/* Force visibility for active popup */
+.home_iws_sec .industry_tab_item.active .tab_content {
+  display: block !important;
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 100 !important;
+}

@@ -3,7 +3,18 @@ import { motion } from 'framer-motion';
 import AnimatedText from './AnimatedText';
 import wcqBgImg from '../assets/images/home/home_wcq_sec_bg_img.jpg';
 
-const WCQSection = () => {
+const WCQSection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
+  // Use Strapi data with fallbacks
+  const wcqData = data || homepage?.wcq || {};
+  const title = wcqData.title || 'Why Choose Quartic';
+  const subtitle = wcqData.subtitle || 'The Future of Manufacturing';
+  const description = wcqData.description || 'Experience the power of intelligent manufacturing operations management.';
+  const backgroundImage = wcqData.backgroundImage || wcqBgImg;
+  
+  // Debug logging
+  console.log('WCQSection - homepage:', homepage);
+  console.log('WCQSection - wcqData:', wcqData);
+
   return (
     <section className="home_wcq_sec position-relative w-100">
       <div className="home_wcq_content_wrap overflow-hidden">

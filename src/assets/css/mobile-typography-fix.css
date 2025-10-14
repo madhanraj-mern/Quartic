@@ -1,0 +1,405 @@
+/* Mobile Typography Fix - Enhanced Readability */
+
+/* ===========================================
+   MOBILE TYPOGRAPHY ENHANCEMENTS
+   =========================================== */
+
+/* Base mobile typography improvements */
+@media (max-width: 768px) {
+  /* Increase base font size for better readability */
+  body {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Headings - Much larger for mobile */
+  h1 {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
+  }
+
+  h2 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 14px !important;
+  }
+
+  h3 {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+  }
+
+  h4 {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 10px !important;
+  }
+
+  h5 {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+  }
+
+  h6 {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Paragraphs and text */
+  p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Links */
+  a {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Buttons - Larger and more touch-friendly */
+  .btn {
+    font-size: 16px !important;
+    padding: 14px 28px !important;
+    min-height: 48px !important;
+    line-height: 1.4 !important;
+  }
+
+  .btn-sm {
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    min-height: 40px !important;
+  }
+
+  .btn-lg {
+    font-size: 18px !important;
+    padding: 16px 32px !important;
+    min-height: 52px !important;
+  }
+
+  /* Form elements */
+  input, textarea, select {
+    font-size: 16px !important;
+    padding: 12px 16px !important;
+    min-height: 48px !important;
+  }
+
+  label {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Navigation */
+  .nav-link {
+    font-size: 16px !important;
+    padding: 12px 16px !important;
+    min-height: 44px !important;
+  }
+
+  .navbar-brand {
+    font-size: 20px !important;
+  }
+
+  /* Cards */
+  .card-title {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .card-text {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Lists */
+  li {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Small text - Still readable */
+  small, .small {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    margin: 16px 0 !important;
+  }
+
+  /* Code */
+  code {
+    font-size: 14px !important;
+    padding: 2px 6px !important;
+  }
+
+  pre {
+    font-size: 14px !important;
+    padding: 12px !important;
+  }
+}
+
+/* ===========================================
+   IWS SECTION MOBILE TYPOGRAPHY
+   =========================================== */
+
+@media (max-width: 768px) {
+  /* IWS Section Main Heading */
+  .home_iws_sec .sec_heading_holder .h3_heading_text {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* IWS Section Description */
+  .home_iws_sec .heading_text p {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* IWS Section Tag */
+  .home_iws_sec .sec_heading_holder .tag_lightBlue {
+    font-size: 16px !important;
+    padding: 10px 20px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Counter Numbers - Much larger */
+  .home_iws_sec .counter-number .statvalue {
+    font-size: 36px !important;
+    line-height: 1 !important;
+  }
+
+  .home_iws_sec .counter-number span:last-child {
+    font-size: 36px !important;
+    line-height: 1 !important;
+  }
+
+  /* Counter Descriptions */
+  .home_iws_sec .counter-infoText p {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+  }
+
+  /* Industry Tab Titles */
+  .home_iws_sec .industry_tab_item .tab_title {
+    font-size: 16px !important;
+    padding: 14px 20px !important;
+    min-height: 48px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Popup Card Title */
+  .home_iws_sec .industry_tab_item .tab_title_popup {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Popup Card Description */
+  .home_iws_sec .industry_tab_item .tab_description {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Popup Card Button */
+  .home_iws_sec .industry_tab_item .tab_actions .btn {
+    font-size: 16px !important;
+    padding: 14px 28px !important;
+    min-height: 48px !important;
+  }
+
+  /* Slider Info Title */
+  .home_iws_sec .iws-thumb-slider .slide-info .title_text {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Slider Info Description */
+  .home_iws_sec .iws-thumb-slider .slide-info .active_show_content p {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Slider Info Button */
+  .home_iws_sec .iws-thumb-slider .slide-info .active_show_content .btn {
+    font-size: 16px !important;
+    padding: 12px 24px !important;
+    min-height: 48px !important;
+  }
+}
+
+/* ===========================================
+   TABLET TYPOGRAPHY ENHANCEMENTS
+   =========================================== */
+
+@media (min-width: 769px) and (max-width: 991px) {
+  /* Tablet base font size */
+  body {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Tablet headings */
+  h1 {
+    font-size: 36px !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 32px !important;
+    line-height: 1.3 !important;
+  }
+
+  h3 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* IWS Section Tablet Typography */
+  .home_iws_sec .sec_heading_holder .h3_heading_text {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+
+  .home_iws_sec .heading_text p {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+  }
+
+  .home_iws_sec .counter-number .statvalue {
+    font-size: 40px !important;
+  }
+
+  .home_iws_sec .counter-number span:last-child {
+    font-size: 40px !important;
+  }
+
+  .home_iws_sec .counter-infoText p {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+
+  .home_iws_sec .industry_tab_item .tab_title {
+    font-size: 16px !important;
+    padding: 12px 18px !important;
+  }
+
+  .home_iws_sec .industry_tab_item .tab_title_popup {
+    font-size: 24px !important;
+  }
+
+  .home_iws_sec .industry_tab_item .tab_description {
+    font-size: 18px !important;
+  }
+}
+
+/* ===========================================
+   MOBILE NAVIGATION ENHANCEMENTS
+   =========================================== */
+
+@media (max-width: 768px) {
+  /* Mobile menu items */
+  .mobile-nav-link {
+    font-size: 18px !important;
+    padding: 16px 24px !important;
+    min-height: 52px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Mobile menu close button */
+  .mobile-menu-close {
+    font-size: 28px !important;
+    padding: 12px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+  }
+
+  /* Mobile logo */
+  .mobile-logo {
+    font-size: 24px !important;
+  }
+
+  /* Mobile dropdown items */
+  .mobile-nav-dropdown .dropdown-item {
+    font-size: 16px !important;
+    padding: 12px 24px !important;
+    min-height: 44px !important;
+  }
+}
+
+/* ===========================================
+   TOUCH-FRIENDLY INTERACTIONS
+   =========================================== */
+
+@media (max-width: 768px) {
+  /* Ensure all interactive elements are touch-friendly */
+  button, a, input, select, textarea {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  /* Increase touch targets for small elements */
+  .icon, .btn-icon {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    padding: 12px !important;
+  }
+
+  /* Card interactions */
+  .card {
+    padding: 20px !important;
+  }
+
+  .card-body {
+    padding: 16px !important;
+  }
+
+  /* Form spacing */
+  .form-group {
+    margin-bottom: 20px !important;
+  }
+
+  .form-control {
+    margin-bottom: 16px !important;
+  }
+}
+
+/* ===========================================
+   ACCESSIBILITY IMPROVEMENTS
+   =========================================== */
+
+@media (max-width: 768px) {
+  /* Ensure sufficient color contrast */
+  .text-muted {
+    color: #666666 !important;
+  }
+
+  /* Improve focus indicators */
+  button:focus, a:focus, input:focus, select:focus, textarea:focus {
+    outline: 2px solid #007bff !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Ensure text is not too close to edges */
+  .container, .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}

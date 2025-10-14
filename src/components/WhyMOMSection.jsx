@@ -1,110 +1,111 @@
 import React from 'react';
-import AnimatedText from './AnimatedText';
-import AnimatedDivider from './AnimatedDivider';
-import momSvgDesktop from '../assets/images/home/intelligent-mom.svg';
-import momSvgMobile from '../assets/images/home/why-mom-img.svg';
+import { motion } from 'framer-motion';
 
-const whyMomFeatures = [
-  {
-    title: 'Highly Responsive',
-    description: 'Instantly adapts to production changes with real-time insight.',
-  },
-  {
-    title: 'Predictive Operations',
-    description: 'AI-powered intelligence enables proactive decisions and control.',
-  },
-  {
-    title: 'Decision Automation',
-    description: 'Reduces manual effort with system-driven decision execution.',
-  },
-  {
-    title: 'Real-Time Connectivity',
-    description: 'Unifies siloed data across OT and IT for seamless operations.',
-  },
-];
-
-const WhyMOMSection = ({ homepage }) => {
+const WhyMOMSection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
   // Use Strapi data with fallbacks
-  const advantageData = homepage?.theQuarticAdvantage || {};
-  const buttonData = homepage?.button || {};
-  const title = advantageData.title || 'The Quartic Advantage';
-  const subtitle = advantageData.subtitle || 'Connected, Intelligent MOM';
-  const points = advantageData.points || whyMomFeatures;
-  const buttonText = buttonData.text || advantageData.buttonText || 'Why Intelligent MOM';
-  const buttonUrl = buttonData.url || advantageData.buttonUrl || '/why-mom';
-  const buttonClass = buttonData.className || 'btn btn_orange';
+  const momData = data || homepage?.theQuarticAdvantage || {};
+  const title = momData.title || 'The Quartic Advantage';
+  const subtitle = momData.subtitle || 'Connected, Intelligent MOM';
   
   // Debug logging
-  console.log('🔍 WhyMOMSection Debug:', {
-    hasHomepage: !!homepage,
-    hasAdvantageData: !!advantageData,
-    hasButtonData: !!buttonData,
-    advantageData,
-    buttonData,
-    title,
-    subtitle,
-    buttonText,
-    buttonUrl,
-    buttonClass,
-    pointsCount: points?.length || 0,
-    debugInfo: advantageData._debug
-  });
+  console.log('WhyMOMSection - homepage:', homepage);
+  console.log('WhyMOMSection - momData:', momData);
+  
+  const features = momData.features || [
+    {
+      title: 'Highly Responsive',
+      description: 'Adapts to changes instantly with context-rich insights.'
+    },
+    {
+      title: 'Predictive Operations',
+      description: 'Enables foresight using industrial AI for smarter control.'
+    },
+    {
+      title: 'Automated Decision Systems',
+      description: 'Reduces manual input by executing logic-based decisions at speed.'
+    },
+    {
+      title: 'Real-Time Connectivity',
+      description: 'Breaks down silos by linking OT, IT, and enterprise systems.'
+    }
+  ];
+
+  // Debug logging
+  console.log('WhyMOMSection - homepage:', homepage);
+  console.log('WhyMOMSection - momData:', momData);
+
   return (
-    <section className="theQuarticAdvantage bg-black">
-      <div className="container pe-sm-0">
-        <div className="w-100 position-relative">
-          <AnimatedDivider className="col_divider_line anim-item-clipDown-line" />
-
-          <div className="row align-items-center gx-lg-4">
-            <div className="home_why_mom_svg_col px-lg-4">
-              <div className="zoom-container d-block d-md-none">
-                <button className="zoom_toggle_btn" id="toggleZoomBtn">
-                  <img src="/assets/images/icons/zoom-icon.svg" alt="Zoom In" />
-                  <span>Zoom In</span>
-                </button>
-                <img src={momSvgMobile} alt="Intelligent MOM diagram" className="w-100" />
+    <section className="theQuarticAdvantage">
+      <div className="container">
+        <div className="row gx-0">
+          {/* Left Side - Diagram */}
+          <div className="col-lg-7 home_why_mom_svg_col">
+            <motion.div
+              className="zoom-container"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="svg_holder">
+                <img 
+                  src="/src/assets/images/home/intelligent-mom.svg" 
+                  alt="Connected, Intelligent MOM Diagram" 
+                  width="100%" 
+                  height="100%"
+                />
               </div>
+            </motion.div>
+          </div>
 
-              <div className="svg_holder w-100 text-start d-none d-md-block">
-                <img src={momSvgDesktop} loading="lazy" alt="Intelligent MOM" />
-              </div>
-            </div>
-
-            <div className="home_why_mom_dsc_content_col pe-lg-4">
-              <div className="home_why_mom_dsc_content_holder">
-                <div className="sec_heading_wrap">
-                  <div className="sec_heading_holder">
-                    <span className="tag_lightBlue lh-base tag-mb-20px">{title}</span>
-                    <AnimatedText
-                      tag="h2"
-                      className="h3_heading_text fw-medium text-white"
-                      text={subtitle}
-                    />
-                  </div>
-                </div>
-
-                <div className="comn_dsc_text_white">
-                  <ul className="reveal_li">
-                    {points.map((feature) => (
-                      <li key={feature.title}>
-                        <p className="fw-medium text-white">{feature.title}</p>
-                        <p>{feature.description}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className={buttonData.containerClass || "btn-holder"}>
-                  <a href={buttonUrl} className={buttonClass} aria-label={buttonText}>
-                    <span>{buttonText}</span>
-                    <span className="arrow" />
-                  </a>
-                  <p className="fst-italic text-white mt-3 mb-0">
-                    Connected, Intelligent, and Responsive MOM Systems
-                  </p>
+          {/* Right Side - Content */}
+          <div className="col-lg-5 home_why_mom_dsc_content_col">
+            <motion.div
+              className="home_why_mom_dsc_content_holder"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="sec_heading_wrap">
+                <div className="sec_heading_holder">
+                  <span className="tag_lightBlue lh-base tag-mb-20px">{title}</span>
+                  <h2 className="h3_heading_text fw-medium split_text words_slide_from_right">
+                    {subtitle}
+                  </h2>
                 </div>
               </div>
-            </div>
+              
+              <div className="whymom_card_dsc_content_item_row">
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="whymom_card_dsc_content_item"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                  >
+                    <div className="dsc_content_item_body side-dot">
+                      <h3 className="heading_text">{feature.title}</h3>
+                      <p>{feature.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              
+              <motion.div
+                className="btn_holder"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                <a href="#" className="btn btn-primary">
+                  Why Intelligent MOM →
+                </a>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>

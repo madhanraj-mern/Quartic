@@ -1,0 +1,537 @@
+/* Customer Proofs Section - Exact Design Match */
+
+.customer_testimonials_sec {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+/* Container padding to match reference */
+.customer_testimonials_sec .container {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+/* Override any conflicting styles with maximum specificity */
+section.customer_testimonials_sec.bg-white {
+  padding: 80px 0 !important;
+  background-color: #ffffff !important;
+}
+
+section.customer_testimonials_sec.bg-white * {
+  text-align: left !important;
+}
+
+section.customer_testimonials_sec.bg-white .row {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+/* 3-Panel Layout - Left Panel (Image) */
+section.customer_testimonials_sec.bg-white .col-lg-4:first-child {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  padding-right: 1rem !important;
+  padding-left: 0 !important;
+}
+
+/* 3-Panel Layout - Middle Panel (Testimonial) */
+section.customer_testimonials_sec.bg-white .col-lg-4:nth-child(2) {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  padding-left: 0 !important;
+  padding-right: 1rem !important;
+}
+
+/* 3-Panel Layout - Right Panel (Heading + Navigation) */
+section.customer_testimonials_sec.bg-white .col-lg-4:last-child {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  padding-left: 1rem !important;
+  padding-right: 0 !important;
+}
+
+/* Ensure all content in right column is left-aligned */
+section.customer_testimonials_sec.bg-white .col-lg-6:last-child > * {
+  align-self: flex-start !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+/* Specific alignment for heading section */
+section.customer_testimonials_sec.bg-white .heading_section {
+  align-self: flex-start !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+/* Specific alignment for testimonial content */
+section.customer_testimonials_sec.bg-white .testimonial_content_holder {
+  align-self: flex-start !important;
+  width: 100% !important;
+}
+
+/* Specific alignment for navigation section */
+section.customer_testimonials_sec.bg-white .navigation_section {
+  align-self: flex-start !important;
+  width: 100% !important;
+}
+
+/* Force left alignment for all content */
+.customer_testimonials_sec * {
+  text-align: left !important;
+}
+
+.customer_testimonials_sec .row {
+  justify-content: flex-start !important;
+}
+
+/* Left column - Image viewer */
+.customer_testimonials_sec .col-lg-6:first-child {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+/* Right column - Heading, testimonial card, navigation */
+.customer_testimonials_sec .col-lg-6:last-child {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+/* Main Row Container */
+.customer_testimonials_sec .row {
+  align-items: flex-start;
+  gap: 0;
+}
+
+/* Left Column - Image and Testimonial */
+.customer_testimonials_sec .col-lg-6:first-child {
+  padding-right: 3rem;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+/* Right Column - Heading and Navigation */
+.customer_testimonials_sec .col-lg-6:last-child {
+  padding-left: 3rem;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+/* Image Viewer */
+.testimonial_image_holder {
+  width: 100% !important;  
+  height: 500px !important;
+  min-height: 500px !important;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-self: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* Maximum specificity for image viewer */
+section.customer_testimonials_sec.bg-white .testimonial_image_holder {
+  width: 100% !important;
+  height: 500px !important;
+  min-height: 500px !important;
+  align-self: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+.testimonial_image_wrap {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.testimonial_image_wrap img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Testimonial Content Holder */
+.testimonial_content_holder {
+  width: 100% !important;
+  height: 500px !important;
+  min-height: 500px !important;
+  align-self: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Testimonial Card */
+.testimonial_block {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem !important;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100% !important;
+  text-align: left !important;
+  align-self: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  margin-top: 0 !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Maximum specificity for testimonial card */
+section.customer_testimonials_sec.bg-white .testimonial_block {
+  width: 100% !important;
+  height: 100% !important;
+  text-align: left !important;
+  align-self: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+section.customer_testimonials_sec.bg-white .testimonial_content_holder {
+  width: 100% !important;
+  height: 500px !important;
+  min-height: 500px !important;
+  align-self: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Ensure testimonial block content is left-aligned */
+section.customer_testimonials_sec.bg-white .testimonial_block * {
+  text-align: left !important;
+}
+
+section.customer_testimonials_sec.bg-white .testimonial_block {
+  text-align: left !important;
+  align-self: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* Quote Marks */
+.quote_marks {
+  margin-bottom: 1.5rem !important;
+  position: relative;
+  padding-top: 0.5rem !important;
+}
+
+.quote_marks span {
+  font-size: 4rem;
+  color: #6c757d;
+  font-family: serif;
+  line-height: 1;
+  display: block;
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+}
+
+/* Main Quote */
+.testimonial_main_quote {
+  margin-bottom: 1.5rem !important;
+  margin-top: 1rem !important;
+  padding-left: 0 !important;
+}
+
+.testimonial_main_quote p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  line-height: 1.3;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+/* Description */
+.testimonial-review-dsc {
+  margin-bottom: 1.5rem !important;
+  padding-left: 0 !important;
+}
+
+.testimonial-review-dsc p {
+  font-size: 1rem;
+  color: #000;
+  margin: 0;
+  line-height: 1.5;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+/* Separator Line */
+.testimonial-separator {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+/* Author Info */
+.author_info_text {
+  margin-top: 1rem !important;
+  padding-left: 0 !important;
+}
+
+.author-role {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 0.25rem 0;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.author-company {
+  font-size: 0.9rem;
+  color: #000;
+  margin: 0;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+/* Tag */
+.tag-container {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.tag_lightBlue {
+  background-color: #007bff;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+/* Heading Section */
+.heading_section {
+  text-align: left !important;
+  margin-bottom: 2rem !important;
+  width: 100% !important;
+  align-self: flex-start !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Heading */
+.h2_heading_text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  font-family: "Red Hat Text", sans-serif;
+  text-align: left;
+  line-height: 1.2;
+}
+
+/* Navigation Section */
+.navigation_section {
+  margin-top: auto !important;
+  width: 100% !important;
+  align-self: flex-start !important;
+  margin-bottom: 0 !important;
+}
+
+.nav_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* Navigation */
+.testimonial_navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.nav_arrows {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.nav_arrow {
+  border: none;
+  background: transparent;
+  color: #f15a29;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.nav_arrow:hover {
+  opacity: 0.7;
+  background-color: rgba(241, 90, 41, 0.1);
+}
+
+.nav_arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Slide Counter */
+.slide_counter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.testimonial-slide-number {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.current_slide {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: bold;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.total {
+  font-size: 1.5rem;
+  color: #6c757d;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .customer_testimonials_sec .col-lg-4:first-child,
+  .customer_testimonials_sec .col-lg-4:nth-child(2),
+  .customer_testimonials_sec .col-lg-4:last-child {
+    padding-left: 0;
+    padding-right: 0;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial_image_holder {
+    height: 400px !important;
+    min-height: 400px !important;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial_content_holder {
+    height: 400px !important;
+    min-height: 400px !important;
+  }
+  
+  .h2_heading_text {
+    font-size: 2rem;
+  }
+  
+  .testimonial_main_quote p {
+    font-size: 1.25rem;
+  }
+  
+  .quote_marks span {
+    font-size: 3rem;
+  }
+  
+  .nav_row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .testimonial_navigation {
+    align-self: flex-start;
+  }
+  
+  .slide_counter {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .customer_testimonials_sec {
+    padding: 60px 0;
+  }
+  
+  .customer_testimonials_sec .col-lg-4:first-child,
+  .customer_testimonials_sec .col-lg-4:nth-child(2),
+  .customer_testimonials_sec .col-lg-4:last-child {
+    padding-left: 0;
+    padding-right: 0;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial_image_holder {
+    height: 250px !important;
+    min-height: 250px !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial_content_holder {
+    height: 250px !important;
+    min-height: 250px !important;
+  }
+  
+  .testimonial_block {
+    padding: 1.5rem;
+  }
+  
+  .h2_heading_text {
+    font-size: 1.75rem;
+  }
+  
+  .testimonial_main_quote p {
+    font-size: 1.125rem;
+  }
+  
+  .quote_marks span {
+    font-size: 2.5rem;
+  }
+  
+  .nav_row {
+    align-items: flex-start;
+  }
+  
+  .testimonial_navigation {
+    align-self: flex-start;
+  }
+  
+  .slide_counter {
+    justify-content: flex-start;
+  }
+}

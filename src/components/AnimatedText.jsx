@@ -37,7 +37,7 @@ const AnimatedText = ({
           <motion.span
             key={index}
             variants={wordVariants}
-            className="word"
+            className={word.trim() === '' ? 'word-space' : 'word'}
             style={{ display: 'inline' }}
           >
             {word}

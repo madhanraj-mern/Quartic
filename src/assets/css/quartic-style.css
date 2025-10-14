@@ -23,6 +23,73 @@ TABLE OF INDEX:
 # MIXINS CSS
 # BUTTONS CSS
 ====================== */
+
+/* Additional styles from quartic-html integration */
+.wraper-header-top {
+  background: linear-gradient(90deg, #000000 79.81%, #f15a29 100%);
+  padding: 7px 0;
+  background-size: 100% 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  height: auto;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .wraper-header-top {
+    padding: 12px 0;
+  }
+}
+
+@media (min-width: 1800px) {
+  .wraper-header-top {
+    height: 52px;
+  }
+}
+
+.wraper-header-top .infoText {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .wraper-header-top .infoText {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .wraper-header-top .infoText {
+    font-size: 20px;
+  }
+}
+
+.wraper-header-top .tag_lightBlue {
+  font-size: 14px;
+  padding: 2px 6px;
+}
+
+@media (min-width: 768px) {
+  .wraper-header-top .tag_lightBlue {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .wraper-header-top .tag_lightBlue {
+    font-size: 20px;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wraper-header-top .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

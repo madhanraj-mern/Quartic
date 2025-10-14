@@ -11,8 +11,8 @@ const useWordAnimation = (text, options = {}) => {
 
   useEffect(() => {
     if (text) {
-      // Split text into words, preserving HTML tags
-      const wordArray = text.split(/(\s+)/).filter(word => word.trim() !== '');
+      // Split text into words, preserving spaces between words
+      const wordArray = text.split(/(\s+)/).filter(word => word !== '');
       setWords(wordArray);
     }
   }, [text]);

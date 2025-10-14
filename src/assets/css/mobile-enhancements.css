@@ -1,0 +1,752 @@
+/* ===========================================
+   MOBILE RESPONSIVE ENHANCEMENTS
+   Button CSS, Animations, Slideshow, Hover, Dropdown
+   =========================================== */
+
+/* ===========================================
+   MOBILE BUTTON ENHANCEMENTS
+   =========================================== */
+
+/* Base Button Styles for Mobile */
+@media (max-width: 1199px) {
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 44px;
+    min-width: 44px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+  }
+
+  /* Button Variants */
+  .btn-primary {
+    background: linear-gradient(135deg, #ff6a00 0%, #e55a00 100%);
+    color: #ffffff;
+    border-color: #ff6a00;
+    box-shadow: 0 2px 8px rgba(255, 106, 0, 0.3);
+  }
+
+  .btn-secondary {
+    background: #ffffff;
+    color: #ff6a00;
+    border-color: #ff6a00;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #ff6a00;
+    border-color: #ff6a00;
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: #333333;
+    border-color: transparent;
+  }
+
+  /* Button Hover Effects */
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #e55a00 0%, #cc4a00 100%);
+    box-shadow: 0 6px 20px rgba(255, 106, 0, 0.4);
+  }
+
+  .btn-secondary:hover {
+    background: #ff6a00;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(255, 106, 0, 0.3);
+  }
+
+  .btn-outline:hover {
+    background: #ff6a00;
+    color: #ffffff;
+  }
+
+  .btn-ghost:hover {
+    background: rgba(255, 106, 0, 0.1);
+    color: #ff6a00;
+  }
+
+  /* Button Active States */
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Button Focus States */
+  .btn:focus {
+    outline: 2px solid #ff6a00;
+    outline-offset: 2px;
+  }
+
+  /* Button Disabled States */
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Button Sizes */
+  .btn-sm {
+    padding: 8px 16px;
+    font-size: 14px;
+    min-height: 36px;
+  }
+
+  .btn-lg {
+    padding: 16px 32px;
+    font-size: 18px;
+    min-height: 52px;
+  }
+
+  /* Button Groups */
+  .btn-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .btn-group .btn {
+    flex: 1;
+    min-width: auto;
+  }
+}
+
+/* ===========================================
+   MOBILE ANIMATIONS
+   =========================================== */
+
+@media (max-width: 1199px) {
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Slide In Animation */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Scale Animation */
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Bounce Animation */
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Pulse Animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Shake Animation */
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(5px);
+    }
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+  }
+
+  .animate-slide-in-up {
+    animation: slideInUp 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.6s ease-out;
+  }
+
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  /* Staggered Animations */
+  .animate-stagger > * {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+  .animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+  .animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+  .animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+  .animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+}
+
+/* ===========================================
+   MOBILE SLIDESHOW EFFECTS
+   =========================================== */
+
+@media (max-width: 1199px) {
+  /* Splide Slider Mobile Enhancements */
+  .splide {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .splide__track {
+    overflow: hidden;
+  }
+
+  .splide__list {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .splide__slide {
+    flex: 0 0 auto;
+    width: 100%;
+    position: relative;
+  }
+
+  /* Splide Arrows */
+  .splide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ff6a00;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .splide__arrow--prev {
+    left: 10px;
+  }
+
+  .splide__arrow--next {
+    right: 10px;
+  }
+
+  .splide__arrow:hover {
+    background: #ff6a00;
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3);
+  }
+
+  .splide__arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: translateY(-50%);
+  }
+
+  /* Splide Pagination */
+  .splide__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .splide__pagination__page {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .splide__pagination__page.is-active {
+    background: #ff6a00;
+    transform: scale(1.2);
+  }
+
+  .splide__pagination__page:hover {
+    background: #ff6a00;
+    transform: scale(1.1);
+  }
+
+  /* Custom Slider Navigation */
+  .slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .slider-nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #ff6a00;
+    color: #ff6a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider-nav-btn:hover {
+    background: #ff6a00;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3);
+  }
+
+  .slider-nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+/* ===========================================
+   MOBILE HOVER EFFECTS
+   =========================================== */
+
+@media (max-width: 1199px) {
+  /* Card Hover Effects */
+  .card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Image Hover Effects */
+  .img-hover {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .img-hover img {
+    transition: transform 0.3s ease;
+  }
+
+  .img-hover:hover img {
+    transform: scale(1.05);
+  }
+
+  .img-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 106, 0, 0.8), rgba(255, 106, 0, 0.4));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .img-hover:hover::before {
+    opacity: 1;
+  }
+
+  /* Link Hover Effects */
+  .link-hover {
+    position: relative;
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.3s ease;
+  }
+
+  .link-hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff6a00;
+    transition: width 0.3s ease;
+  }
+
+  .link-hover:hover {
+    color: #ff6a00;
+  }
+
+  .link-hover:hover::after {
+    width: 100%;
+  }
+
+  /* Button Hover Effects */
+  .btn-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-hover:hover::before {
+    left: 100%;
+  }
+}
+
+/* ===========================================
+   MOBILE DROPDOWN MENU EFFECTS
+   =========================================== */
+
+@media (max-width: 1199px) {
+  /* Dropdown Container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .dropdown-toggle:hover {
+    background: rgba(255, 106, 0, 0.1);
+  }
+
+  .dropdown-toggle:focus {
+    outline: 2px solid #ff6a00;
+    outline-offset: 2px;
+  }
+
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 200px;
+  }
+
+  .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Dropdown Items */
+  .dropdown-item {
+    display: block;
+    padding: 12px 16px;
+    color: #333333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown-item:hover {
+    background: #f8f9fa;
+    color: #ff6a00;
+    padding-left: 20px;
+  }
+
+  .dropdown-item:focus {
+    background: #f8f9fa;
+    color: #ff6a00;
+    outline: none;
+  }
+
+  /* Dropdown Divider */
+  .dropdown-divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 8px 0;
+  }
+
+  /* Dropdown Header */
+  .dropdown-header {
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666666;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  /* Mobile Navigation Dropdown */
+  .mobile-nav-dropdown {
+    position: relative;
+  }
+
+  .mobile-nav-dropdown .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: #f8f9fa;
+    margin-top: 8px;
+    border-radius: 6px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .mobile-nav-dropdown .dropdown-menu.show {
+    max-height: 300px;
+  }
+
+  .mobile-nav-dropdown .dropdown-item {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .mobile-nav-dropdown .dropdown-item:hover {
+    background: #ffffff;
+    padding-left: 24px;
+  }
+}
+
+/* ===========================================
+   MOBILE TOUCH INTERACTIONS
+   =========================================== */
+
+@media (max-width: 1199px) {
+  /* Touch Feedback */
+  .touch-feedback {
+    -webkit-tap-highlight-color: rgba(255, 106, 0, 0.2);
+    transition: all 0.1s ease;
+  }
+
+  .touch-feedback:active {
+    transform: scale(0.95);
+  }
+
+  /* Swipe Indicators */
+  .swipe-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  .swipe-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .swipe-dot.active {
+    background: #ff6a00;
+    transform: scale(1.2);
+  }
+
+  /* Pull to Refresh */
+  .pull-to-refresh {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pull-to-refresh-indicator {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid #ff6a00;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .pull-to-refresh-indicator.show {
+    opacity: 1;
+    top: 20px;
+  }
+
+  @keyframes spin {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+  }
+}
+
+/* ===========================================
+   MOBILE PERFORMANCE OPTIMIZATIONS
+   =========================================== */
+
+@media (max-width: 1199px) {
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Hardware acceleration for smooth animations */
+  .animate-fade-in,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-slide-in-up,
+  .animate-scale-in,
+  .animate-bounce-in {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+  }
+
+  /* Optimize repaints */
+  .card,
+  .btn,
+  .dropdown-menu {
+    will-change: transform, box-shadow;
+  }
+}

@@ -4,20 +4,15 @@ import AnimatedText from './AnimatedText';
 import AnimatedDivider from './AnimatedDivider';
 import diaBlockImg1 from '../assets/images/home/dia_block-img1.jpg';
 
-const DataIntoActionSection = ({ homepage }) => {
+const DataIntoActionSection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
   // Use Strapi data with fallbacks
-  const exploreButtonData = homepage?.exploreButton || {};
-  const buttonText = exploreButtonData.buttonName || 'Explore All';
-  const buttonUrl = exploreButtonData.url || 'https://www.quartic.ai/customer-stories/';
+  const dataIntoActionData = data || homepage?.dataIntoAction || {};
+  const buttonText = dataIntoActionData.ctaText || 'Explore All';
+  const buttonUrl = dataIntoActionData.ctaUrl || 'https://www.quartic.ai/customer-stories/';
   
   // Debug logging
-  console.log('🔍 Explore Button Debug:', {
-    hasHomepage: !!homepage,
-    hasExploreButtonData: !!exploreButtonData,
-    buttonText,
-    buttonUrl,
-    exploreButtonData
-  });
+  console.log('DataIntoActionSection - homepage:', homepage);
+  console.log('DataIntoActionSection - dataIntoActionData:', dataIntoActionData);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
 
   const industryData = {
@@ -64,11 +59,11 @@ const DataIntoActionSection = ({ homepage }) => {
             <div className="left_top_content">
               <div className="sec_heading_wrap">
                 <div className="sec_heading_holder">
-                  <span className="tag_lightBlue lh-base tag-mb-20px">Pharmaceuticals | CPG | Chemicals</span>
+                  <span className="tag_lightBlue lh-base tag-mb-20px">{dataIntoActionData.tag || "Pharmaceuticals | CPG | Chemicals"}</span>
                   <AnimatedText
                     tag="h2"
                     className="h3_heading_text fw-medium"
-                    text="Driving KPIs in Batch-Critical Environments"
+                    text={dataIntoActionData.subtitle || "Driving KPIs in Batch-Critical Environments"}
                   />
                 </div>
               </div>

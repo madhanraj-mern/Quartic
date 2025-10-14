@@ -117,7 +117,7 @@ const MegaMenu = () => {
       }
     },
     {
-      title: 'Company',
+      title: 'About',
       hasSubmenu: true,
       submenu: {
         title: 'Decision Intelligence for manufacturing Operations',
@@ -129,7 +129,7 @@ const MegaMenu = () => {
               { name: 'News', href: '#' },
               { name: 'Partners', href: '#' },
               { name: 'Careers', href: '#' },
-              { name: 'About Us', href: '#' }
+              { name: 'About Us', href: '/about' }
             ]
           }
         ]

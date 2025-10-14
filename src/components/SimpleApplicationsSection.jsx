@@ -308,7 +308,16 @@ const StyledSection = styled.section`
   }
 `;
 
-const SimpleApplicationsSection = ({ homepage }) => {
+const SimpleApplicationsSection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
+  // Use Strapi data with fallbacks
+  const applicationsData = data || homepage?.simpleApplications || {};
+  const title = applicationsData.title || 'Applications';
+  const subtitle = applicationsData.subtitle || 'Comprehensive Manufacturing Solutions';
+  const description = applicationsData.description || 'Transform your manufacturing operations with our suite of intelligent applications designed for modern manufacturing challenges.';
+  
+  // Debug logging
+  console.log('SimpleApplicationsSection - homepage:', homepage);
+  console.log('SimpleApplicationsSection - applicationsData:', applicationsData);
   // Default applications data matching the live site exactly
   const defaultApplications = [
     {
@@ -354,8 +363,8 @@ const SimpleApplicationsSection = ({ homepage }) => {
   ];
 
   // Use Strapi data if available, otherwise use default data
-  const applications = homepage?.applications?.cards || defaultApplications;
-  const sectionTitle = homepage?.applications?.title || 'Transform Your Operations with Quartic';
+  const applications = applicationsData.applications || defaultApplications;
+  const sectionTitle = title;
   
   useEffect(() => {
     // Initialize AOS only if not already initialized

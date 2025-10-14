@@ -1,0 +1,334 @@
+/* Final Header Fixes - Compact and Professional */
+
+/* ===========================================
+   HEADER COMPACT STYLING
+   =========================================== */
+
+/* Override Bootstrap navbar variables for compact design */
+:root {
+  --bs-navbar-padding-x: 0 !important;
+  --bs-navbar-padding-y: 0.25rem !important;
+  --bs-navbar-brand-padding-y: 0 !important;
+  --bs-navbar-brand-margin-end: 1rem !important;
+  --bs-navbar-nav-link-padding-x: 0.5rem !important;
+  --bs-navbar-toggler-padding-y: 0.25rem !important;
+  --bs-navbar-toggler-padding-x: 0.5rem !important;
+}
+
+/* Main header wrapper - minimal padding */
+.wraper-header-main {
+  padding: 0.25rem 0 !important;
+  background: white !important;
+}
+
+/* Header main - compact height */
+.header-main {
+  min-height: 50px !important;
+  padding: 0.25rem 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+@media (min-width: 768px) {
+  .header-main {
+    min-height: 60px !important;
+    padding: 0.5rem 0 !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-main {
+    min-height: 70px !important;
+    padding: 0.75rem 0 !important;
+  }
+}
+
+/* Navbar - remove all default padding */
+.navbar {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: auto !important;
+}
+
+.navbar-expand-xl {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Container - minimal padding */
+.wraper-header-main .container-fluid {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+@media (min-width: 576px) {
+  .wraper-header-main .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .wraper-header-main .container-fluid {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+/* ===========================================
+   LOGO COMPACT STYLING
+   =========================================== */
+
+.brand-logo {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.brand-logo img {
+  height: 30px !important;
+  width: auto !important;
+  max-width: 120px !important;
+}
+
+@media (min-width: 768px) {
+  .brand-logo img {
+    height: 35px !important;
+    max-width: 140px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .brand-logo img {
+    height: 40px !important;
+    max-width: 150px !important;
+  }
+}
+
+/* ===========================================
+   NAVIGATION COMPACT STYLING
+   =========================================== */
+
+/* Main navigation */
+.main-nav {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.main-nav .menu {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+@media (min-width: 1200px) {
+  .main-nav .menu {
+    gap: 1.5rem !important;
+  }
+}
+
+.main-nav .menu li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.main-nav .menu li a {
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  color: #333 !important;
+  text-decoration: none !important;
+  padding: 0.5rem 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.25rem !important;
+  transition: color 0.3s ease !important;
+  line-height: 1.2 !important;
+}
+
+@media (min-width: 768px) {
+  .main-nav .menu li a {
+    font-size: 1rem !important;
+  }
+}
+
+.main-nav .menu li a:hover {
+  color: #f15a29 !important;
+}
+
+/* ===========================================
+   CONTACT BUTTON COMPACT STYLING
+   =========================================== */
+
+/* Only target the header contact button, not all orange buttons */
+.wraper-header-main .btn-header {
+  font-size: 0.9rem !important;
+  padding: 0.5rem 1rem !important;
+  min-width: auto !important;
+  height: auto !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+  border-radius: 0.25rem !important;
+  background: linear-gradient(135deg, #f15a29 0%, #e55a2b 100%) !important;
+  color: white !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.25rem !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+@media (min-width: 768px) {
+  .wraper-header-main .btn-header {
+    font-size: 1rem !important;
+    padding: 0.5rem 1.25rem !important;
+  }
+}
+
+.wraper-header-main .btn-header:hover {
+  background: linear-gradient(135deg, #e55a2b 0%, #d14d1f 100%) !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(241, 90, 41, 0.3) !important;
+}
+
+.wraper-header-main .btn-header:focus {
+  outline: 2px solid #f15a29 !important;
+  outline-offset: 2px !important;
+}
+
+/* ===========================================
+   MOBILE MENU BUTTON
+   =========================================== */
+
+.header-mobilemenu-trigger {
+  padding: 0.5rem !important;
+  border: none !important;
+  background: transparent !important;
+  border-radius: 0.25rem !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.header-mobilemenu-trigger:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.header-mobilemenu-trigger img {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* ===========================================
+   RESPONSIVE ADJUSTMENTS
+   =========================================== */
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .wraper-header-main {
+    padding: 0.25rem 0 !important;
+  }
+  
+  .header-main {
+    min-height: 45px !important;
+    padding: 0.25rem 0 !important;
+  }
+  
+  .brand-logo img {
+    height: 28px !important;
+    max-width: 100px !important;
+  }
+  
+  .wraper-header-main .btn-header {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header-main {
+    min-height: 55px !important;
+  }
+  
+  .brand-logo img {
+    height: 32px !important;
+    max-width: 120px !important;
+  }
+}
+
+/* ===========================================
+   OVERRIDE ANY CONFLICTING STYLES
+   =========================================== */
+
+/* Ensure our styles take precedence */
+.wraper-header-main .navbar {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: auto !important;
+}
+
+.wraper-header-main .navbar-expand-xl {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.wraper-header-main .navbar-brand {
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-right: 1rem !important;
+}
+
+.wraper-header-main .navbar-nav {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.wraper-header-main .navbar-nav .nav-item {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.wraper-header-main .navbar-nav .nav-link {
+  padding: 0.5rem 0 !important;
+  margin: 0 !important;
+}
+
+/* ===========================================
+   ACCESSIBILITY IMPROVEMENTS
+   =========================================== */
+
+/* Focus states */
+.wraper-header-main .btn-header:focus,
+.main-nav .menu li a:focus {
+  outline: 2px solid #f15a29 !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .wraper-header-main .btn-header {
+    background: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+  }
+  
+  .main-nav .menu li a {
+    color: #000 !important;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .wraper-header-main .btn-header,
+  .main-nav .menu li a {
+    transition: none !important;
+  }
+  
+  .wraper-header-main .btn-header:hover {
+    transform: none !important;
+  }
+}

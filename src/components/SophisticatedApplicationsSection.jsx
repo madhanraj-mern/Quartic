@@ -329,7 +329,16 @@ const StyledSection = styled.section`
   }
 `;
 
-const SophisticatedApplicationsSection = ({ homepage }) => {
+const SophisticatedApplicationsSection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
+  // Use Strapi data with fallbacks
+  const sophisticatedAppsData = data || homepage?.sophisticatedApplications || {};
+  const title = sophisticatedAppsData.title || 'Sophisticated Applications';
+  const subtitle = sophisticatedAppsData.subtitle || 'Advanced Manufacturing Solutions';
+  const description = sophisticatedAppsData.description || 'Cutting-edge applications designed for complex manufacturing challenges.';
+  
+  // Debug logging
+  console.log('SophisticatedApplicationsSection - homepage:', homepage);
+  console.log('SophisticatedApplicationsSection - sophisticatedAppsData:', sophisticatedAppsData);
   // Default applications data with proper icons and images
   const defaultApplications = [
     {
@@ -408,7 +417,7 @@ const SophisticatedApplicationsSection = ({ homepage }) => {
 
   // Use Strapi data if available and not loading, otherwise use default data
   const applications = strapiLoading ? defaultApplications : strapiApplications;
-  const sectionTitle = homepage?.applications?.title || 'Transform Your Operations with Quartic';
+  const sectionTitle = homepage?.applicationsSection?.title || 'Transform Your Operations with Quartic';
   
   useEffect(() => {
     // Initialize AOS only if not already initialized

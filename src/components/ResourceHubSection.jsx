@@ -4,10 +4,20 @@ import blogImg1 from '../assets/images/blog/blog-listing-img1.png';
 import blogImg2 from '../assets/images/blog/blog-listing-img2.jpg';
 import videoThumb from '../assets/images/menu/video-thumb.png';
 
-const ResourceHubSection = () => {
+const ResourceHubSection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
   const [activeTab, setActiveTab] = useState('all');
 
-  const resources = [
+  // Use Strapi data with fallbacks
+  const resourceHubData = data || homepage?.resourceHub || {};
+  const title = resourceHubData.title || 'Resource Hub';
+  const subtitle = resourceHubData.subtitle || 'Latest Insights and Resources';
+  const description = resourceHubData.description || 'Stay updated with the latest manufacturing insights, case studies, and resources.';
+  
+  // Debug logging
+  console.log('ResourceHubSection - homepage:', homepage);
+  console.log('ResourceHubSection - resourceHubData:', resourceHubData);
+
+  const resources = resourceHubData.resources || [
     {
       id: 1,
       type: 'blog',

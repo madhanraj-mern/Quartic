@@ -1,7 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const CTASection = () => {
+const CTASection = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
+  // Use Strapi data with fallbacks
+  const ctaData = data || homepage?.ctaSection || {};
+  const title = ctaData.title || 'Ready to See What Manufacturing Decision Intelligence Looks Like?';
+  const description = ctaData.description || 'Powering connected, responsive, and agile manufacturing by unifying plant-floor systems, enterprise data, and AI-enabled decision intelligence.';
+  const ctaText = ctaData.ctaText || 'Schedule a Demo';
+  const ctaUrl = ctaData.ctaUrl || '#';
+  
+  // Debug logging
+  console.log('CTASection - homepage:', homepage);
+  console.log('CTASection - ctaData:', ctaData);
+
   return (
     <section className="cta_sec bg-primary">
       <div className="container">
@@ -15,20 +26,19 @@ const CTASection = () => {
               className="text-center text-white py-5"
             >
               <h2 className="h2_heading_text fw-medium mb-4">
-                Ready to See What Manufacturing Decision Intelligence Looks Like?
+                {title}
               </h2>
               <p className="lead mb-4">
-                Powering connected, responsive, and agile manufacturing by unifying plant-floor systems, 
-                enterprise data, and AI-enabled decision intelligence.
+                {description}
               </p>
               <motion.a
-                href="#"
+                href={ctaUrl}
                 className="btn btn_orange"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                aria-label="Schedule a Demo"
+                aria-label={ctaText}
               >
-                <span>Schedule a Demo</span>
+                <span>{ctaText}</span>
                 <motion.span
                   className="arrow"
                   whileHover={{ x: 5 }}

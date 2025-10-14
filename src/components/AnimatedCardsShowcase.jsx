@@ -6,11 +6,21 @@ import PDOptimizerCard from './PDOptimizerCard';
 import AutomatedPATCard from './AutomatedPATCard';
 import styles from './AnimatedCardsShowcase.module.css';
 
-const AnimatedCardsShowcase = () => {
+const AnimatedCardsShowcase = ({ homepage, data, isFirst, isLast, sectionIndex, pageType }) => {
   const [animationType, setAnimationType] = useState('fadeIn');
   const [activeCard, setActiveCard] = useState('all');
 
-  const cards = [
+  // Use Strapi data with fallbacks
+  const animatedCardsData = data || homepage?.animatedCardsShowcase || {};
+  const title = animatedCardsData.title || 'Animated Cards Showcase';
+  const subtitle = animatedCardsData.subtitle || 'Interactive Solution Cards';
+  const description = animatedCardsData.description || 'Explore our comprehensive suite of manufacturing solutions through interactive cards.';
+  
+  // Debug logging
+  console.log('AnimatedCardsShowcase - homepage:', homepage);
+  console.log('AnimatedCardsShowcase - animatedCardsData:', animatedCardsData);
+
+  const cards = animatedCardsData.cards || [
     {
       id: 'process-optimizer',
       title: 'Process Optimizer',
