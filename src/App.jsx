@@ -1,6 +1,6 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// Updated: Dynamic content and mobile responsiveness enhancements
+// Updated: Dynamic content and mobile responsiveness enhancements - Force Vercel redeploy
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Fancybox } from '@fancyapps/ui';
