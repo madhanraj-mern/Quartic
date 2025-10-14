@@ -70,6 +70,16 @@ const FallbackSection = ({ section, homepage, data }) => {
 };
 
 const DynamicSectionRenderer = ({ sections, pageType = 'homepage', homepage }) => {
+      // Debug: Log sections being rendered
+      console.log('🎭 DynamicSectionRenderer - Rendering sections:', {
+        sectionsCount: sections?.length || 0,
+        sections: sections?.map(s => ({
+          __component: s.__component,
+          id: s.id,
+          visible: s.visible
+        })) || []
+      });
+
       // Component mapping object - maps Strapi component types to React components
       const componentMap = {
         // Header and Navigation

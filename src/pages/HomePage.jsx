@@ -44,6 +44,15 @@ const HomePage = () => {
   // Check if this is dynamic content (has dynamicSections)
   const isDynamic = homepage?.isDynamic && homepage?.dynamicSections;
 
+  // Debug: Log which rendering path is being taken
+  console.log('🏠 HomePage - Rendering decision:', {
+    isDynamic,
+    hasHomepage: !!homepage,
+    hasDynamicSections: !!homepage?.dynamicSections,
+    dynamicSectionsCount: homepage?.dynamicSections?.length || 0,
+    homepageKeys: homepage ? Object.keys(homepage) : []
+  });
+
   return (
     <div ref={containerRef} className="home-page" style={{ position: 'relative' }}>
       
