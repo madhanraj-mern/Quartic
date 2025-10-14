@@ -4,6 +4,7 @@ import useHomepageData from '../hooks/useHomepageData';
 import DynamicSectionRenderer from '../components/DynamicSectionRenderer';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
+import SimpleHeroSection from '../components/SimpleHeroSection';
 import ClientLogoSlider from '../components/ClientLogoSlider';
 import HowItWorksSection from '../components/HowItWorksSection';
 import OurProcessSection from '../components/OurProcessSection';
@@ -60,7 +61,7 @@ const HomePage = () => {
         // Static rendering - fallback to hardcoded sections
         <>
           <Header homepage={homepage} />
-          <HeroSection homepage={homepage} />
+          <SimpleHeroSection homepage={homepage} />
           <ClientLogoSlider homepage={homepage} />
           <HowItWorksSection homepage={homepage} />
           <WhyMOMSection homepage={homepage} />
